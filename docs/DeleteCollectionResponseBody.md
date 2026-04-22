@@ -1,0 +1,20 @@
+# DeleteCollectionResponseBody
+
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**requestId** | **string** | The request ID for tracking. | [optional] [default to undefined]
+
+## Example
+
+```typescript
+import { DeleteCollectionResponseBody } from 'pylon-typescript-sdk';
+
+const instance: DeleteCollectionResponseBody = {
+    requestId,
+};
+```
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
