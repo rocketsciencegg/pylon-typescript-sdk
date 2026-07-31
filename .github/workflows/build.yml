@@ -16,3 +16,9 @@ jobs:
           cache: 'npm'
       - run: npm ci
       - run: npx tsc
+      # `dist/` is COMMITTED, because consumers install this over `github:` and there is no `prepare`
+      # build (one used to exist and broke installs — see #8). That makes the checked-in output the
+      # actual published artifact, so it has to be verified: if someone edits api.ts and forgets to
+      # rebuild, every consumer silently gets stale code and nothing anywhere complains.
+      - name: committed dist/ must match a fresh build
+        run: git diff --exit-code dist/ || (echo "::error::dist/ is stale — run 'npx tsc' and commit dist/" && exit 1)
