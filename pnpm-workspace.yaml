@@ -1,0 +1,11 @@
+# Supply-chain cooldown: refuse any package version published less than 24h ago.
+#
+# Mirrors beam's `minimumReleaseAge: 1440`. The window is the point — most malicious npm publishes are
+# caught and yanked within hours, so simply not being first to install a fresh version removes most of
+# that exposure for free. If an urgent version is genuinely needed, pin it and wait the day out rather
+# than removing the guard.
+#
+# Lives here rather than in .npmrc because `npm` does not understand the key and warns
+# ("Unknown project config minimum-release-age"), while pnpm reads it from either. npm has no
+# equivalent setting, so this guard only applies to pnpm installs.
+minimumReleaseAge: 1440
