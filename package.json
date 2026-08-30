@@ -24,7 +24,7 @@
     "axios": "^1.18.0"
   },
   "devDependencies": {
-    "@types/node": "^25.5.0",
+    "@types/node": "^26.4.0",
     "typescript": "^6.0"
   },
   "files": [
