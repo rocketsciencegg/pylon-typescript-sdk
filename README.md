@@ -16,6 +16,12 @@ Pin a specific version:
 npm install github:rocketsciencegg/pylon-typescript-sdk#v0.1.0
 ```
 
+## Requirements
+
+Node.js **>= 22.13.0** (enforced via `engines` in `package.json`). That is the
+compatibility floor for consumers, not the toolchain: this repo builds and releases
+on the exact version in `.node-version`.
+
 ## Quick Start
 
 ```typescript
