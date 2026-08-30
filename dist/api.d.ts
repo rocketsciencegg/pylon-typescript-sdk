@@ -443,9 +443,9 @@ export interface Contact {
     'primary_phone_number'?: string;
 }
 export declare const ContactPortalRoleEnum: {
-    readonly NoAccess: "no_access";
-    readonly Member: "member";
-    readonly Admin: "admin";
+    readonly NoAccess: 'no_access';
+    readonly Member: 'member';
+    readonly Admin: 'admin';
 };
 export type ContactPortalRoleEnum = typeof ContactPortalRoleEnum[keyof typeof ContactPortalRoleEnum];
 export interface CreateAccountHighlightRequestBody {
@@ -744,9 +744,9 @@ export interface CreateContactRequestBody {
     'primary_phone_number'?: string;
 }
 export declare const CreateContactRequestBodyPortalRoleEnum: {
-    readonly NoAccess: "no_access";
-    readonly Member: "member";
-    readonly Admin: "admin";
+    readonly NoAccess: 'no_access';
+    readonly Member: 'member';
+    readonly Admin: 'admin';
 };
 export type CreateContactRequestBodyPortalRoleEnum = typeof CreateContactRequestBodyPortalRoleEnum[keyof typeof CreateContactRequestBodyPortalRoleEnum];
 export interface CreateContactResponseBody {
@@ -1444,12 +1444,12 @@ export interface DestinationMetadata {
     'whatsapp_message_template_name'?: string;
 }
 export declare const DestinationMetadataDestinationEnum: {
-    readonly Slack: "slack";
-    readonly Email: "email";
-    readonly InAppChat: "in_app_chat";
-    readonly Internal: "internal";
-    readonly Sms: "sms";
-    readonly Whatsapp: "whatsapp";
+    readonly Slack: 'slack';
+    readonly Email: 'email';
+    readonly InAppChat: 'in_app_chat';
+    readonly Internal: 'internal';
+    readonly Sms: 'sms';
+    readonly Whatsapp: 'whatsapp';
 };
 export type DestinationMetadataDestinationEnum = typeof DestinationMetadataDestinationEnum[keyof typeof DestinationMetadataDestinationEnum];
 export interface EmailMessageInfo {
@@ -1637,25 +1637,25 @@ export interface Filter {
     'values'?: Array<string>;
 }
 export declare const FilterOperatorEnum: {
-    readonly Equals: "equals";
-    readonly NotEquals: "not_equals";
-    readonly Contains: "contains";
-    readonly DoesNotContain: "does_not_contain";
-    readonly In: "in";
-    readonly NotIn: "not_in";
-    readonly And: "and";
-    readonly Or: "or";
-    readonly TimeIsAfter: "time_is_after";
-    readonly TimeIsBefore: "time_is_before";
-    readonly TimeRange: "time_range";
-    readonly StringContains: "string_contains";
-    readonly StringDoesNotContain: "string_does_not_contain";
-    readonly IsSet: "is_set";
-    readonly IsUnset: "is_unset";
-    readonly GreaterThan: "greater_than";
-    readonly LessThan: "less_than";
-    readonly GreaterThanOrEquals: "greater_than_or_equals";
-    readonly LessThanOrEquals: "less_than_or_equals";
+    readonly Equals: 'equals';
+    readonly NotEquals: 'not_equals';
+    readonly Contains: 'contains';
+    readonly DoesNotContain: 'does_not_contain';
+    readonly In: 'in';
+    readonly NotIn: 'not_in';
+    readonly And: 'and';
+    readonly Or: 'or';
+    readonly TimeIsAfter: 'time_is_after';
+    readonly TimeIsBefore: 'time_is_before';
+    readonly TimeRange: 'time_range';
+    readonly StringContains: 'string_contains';
+    readonly StringDoesNotContain: 'string_does_not_contain';
+    readonly IsSet: 'is_set';
+    readonly IsUnset: 'is_unset';
+    readonly GreaterThan: 'greater_than';
+    readonly LessThan: 'less_than';
+    readonly GreaterThanOrEquals: 'greater_than_or_equals';
+    readonly LessThanOrEquals: 'less_than_or_equals';
 };
 export type FilterOperatorEnum = typeof FilterOperatorEnum[keyof typeof FilterOperatorEnum];
 export interface Follower {
@@ -1669,8 +1669,8 @@ export interface Follower {
     'type'?: FollowerTypeEnum;
 }
 export declare const FollowerTypeEnum: {
-    readonly User: "user";
-    readonly Contact: "contact";
+    readonly User: 'user';
+    readonly Contact: 'contact';
 };
 export type FollowerTypeEnum = typeof FollowerTypeEnum[keyof typeof FollowerTypeEnum];
 export interface GetAccountResponseBody {
@@ -2068,9 +2068,9 @@ export interface ImportContactRequestBody {
     'portal_role'?: ImportContactRequestBodyPortalRoleEnum;
 }
 export declare const ImportContactRequestBodyPortalRoleEnum: {
-    readonly NoAccess: "no_access";
-    readonly Member: "member";
-    readonly Admin: "admin";
+    readonly NoAccess: 'no_access';
+    readonly Member: 'member';
+    readonly Admin: 'admin';
 };
 export type ImportContactRequestBodyPortalRoleEnum = typeof ImportContactRequestBodyPortalRoleEnum[keyof typeof ImportContactRequestBodyPortalRoleEnum];
 export interface ImportContactResponseBody {
@@ -2350,23 +2350,23 @@ export interface Issue {
     'updated_at'?: string;
 }
 export declare const IssueSourceEnum: {
-    readonly Slack: "slack";
-    readonly MicrosoftTeams: "microsoft_teams";
-    readonly MicrosoftTeamsChat: "microsoft_teams_chat";
-    readonly ChatWidget: "chat_widget";
-    readonly Email: "email";
-    readonly Manual: "manual";
-    readonly Form: "form";
-    readonly Discord: "discord";
-    readonly Whatsapp: "whatsapp";
-    readonly Sms: "sms";
-    readonly Telegram: "telegram";
-    readonly Phone: "phone";
+    readonly Slack: 'slack';
+    readonly MicrosoftTeams: 'microsoft_teams';
+    readonly MicrosoftTeamsChat: 'microsoft_teams_chat';
+    readonly ChatWidget: 'chat_widget';
+    readonly Email: 'email';
+    readonly Manual: 'manual';
+    readonly Form: 'form';
+    readonly Discord: 'discord';
+    readonly Whatsapp: 'whatsapp';
+    readonly Sms: 'sms';
+    readonly Telegram: 'telegram';
+    readonly Phone: 'phone';
 };
 export type IssueSourceEnum = typeof IssueSourceEnum[keyof typeof IssueSourceEnum];
 export declare const IssueTypeEnum: {
-    readonly Conversation: "conversation";
-    readonly Ticket: "ticket";
+    readonly Conversation: 'conversation';
+    readonly Ticket: 'ticket';
 };
 export type IssueTypeEnum = typeof IssueTypeEnum[keyof typeof IssueTypeEnum];
 export interface IssueChatWidgetInfo {
@@ -2680,10 +2680,10 @@ export interface NumberMetadata {
     'format'?: NumberMetadataFormatEnum;
 }
 export declare const NumberMetadataFormatEnum: {
-    readonly WithCommas: "with_commas";
-    readonly Percent: "percent";
-    readonly Currency: "currency";
-    readonly Duration: "duration";
+    readonly WithCommas: 'with_commas';
+    readonly Percent: 'percent';
+    readonly Currency: 'currency';
+    readonly Duration: 'duration';
 };
 export type NumberMetadataFormatEnum = typeof NumberMetadataFormatEnum[keyof typeof NumberMetadataFormatEnum];
 export interface Pagination {
@@ -2992,9 +2992,9 @@ export interface Survey {
     'updated_at'?: string;
 }
 export declare const SurveyTypeEnum: {
-    readonly Nps: "nps";
-    readonly Csat: "csat";
-    readonly Custom: "custom";
+    readonly Nps: 'nps';
+    readonly Csat: 'csat';
+    readonly Custom: 'custom';
 };
 export type SurveyTypeEnum = typeof SurveyTypeEnum[keyof typeof SurveyTypeEnum];
 export interface SurveyResponse {
@@ -3385,9 +3385,9 @@ export interface UpdateContactRequestBody {
     'primary_phone_number'?: string;
 }
 export declare const UpdateContactRequestBodyPortalRoleEnum: {
-    readonly NoAccess: "no_access";
-    readonly Member: "member";
-    readonly Admin: "admin";
+    readonly NoAccess: 'no_access';
+    readonly Member: 'member';
+    readonly Admin: 'admin';
 };
 export type UpdateContactRequestBodyPortalRoleEnum = typeof UpdateContactRequestBodyPortalRoleEnum[keyof typeof UpdateContactRequestBodyPortalRoleEnum];
 export interface UpdateContactResponseBody {
@@ -3507,8 +3507,8 @@ export interface UpdateIssueRequestBody {
     'type'?: UpdateIssueRequestBodyTypeEnum;
 }
 export declare const UpdateIssueRequestBodyTypeEnum: {
-    readonly Conversation: "conversation";
-    readonly Ticket: "ticket";
+    readonly Conversation: 'conversation';
+    readonly Ticket: 'ticket';
 };
 export type UpdateIssueRequestBodyTypeEnum = typeof UpdateIssueRequestBodyTypeEnum[keyof typeof UpdateIssueRequestBodyTypeEnum];
 export interface UpdateIssueResponseBody {
@@ -3810,15 +3810,15 @@ export interface VisibilityConfig {
     'visibility'?: VisibilityConfigVisibilityEnum;
 }
 export declare const VisibilityConfigAiAgentAccessEnum: {
-    readonly Inherit: "inherit";
-    readonly None: "none";
-    readonly SpecificAgents: "specific_agents";
+    readonly Inherit: 'inherit';
+    readonly None: 'none';
+    readonly SpecificAgents: 'specific_agents';
 };
 export type VisibilityConfigAiAgentAccessEnum = typeof VisibilityConfigAiAgentAccessEnum[keyof typeof VisibilityConfigAiAgentAccessEnum];
 export declare const VisibilityConfigVisibilityEnum: {
-    readonly Public: "public";
-    readonly Customer: "customer";
-    readonly InternalOnly: "internal_only";
+    readonly Public: 'public';
+    readonly Customer: 'customer';
+    readonly InternalOnly: 'internal_only';
 };
 export type VisibilityConfigVisibilityEnum = typeof VisibilityConfigVisibilityEnum[keyof typeof VisibilityConfigVisibilityEnum];
 export interface VisibilityInput {
@@ -3836,10 +3836,10 @@ export interface VisibilityInput {
     'user_ids'?: Array<string>;
 }
 export declare const VisibilityInputTypeEnum: {
-    readonly Org: "org";
-    readonly User: "user";
-    readonly Team: "team";
-    readonly UsersAndTeams: "users_and_teams";
+    readonly Org: 'org';
+    readonly User: 'user';
+    readonly Team: 'team';
+    readonly UsersAndTeams: 'users_and_teams';
 };
 export type VisibilityInputTypeEnum = typeof VisibilityInputTypeEnum[keyof typeof VisibilityInputTypeEnum];
 /**
@@ -3985,7 +3985,7 @@ export declare class AccountHighlightsApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    createAccountHighlight(requestParameters: AccountHighlightsApiCreateAccountHighlightRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<CreateAccountHighlightResponseBody, any, {}>>;
+    createAccountHighlight(requestParameters: AccountHighlightsApiCreateAccountHighlightRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<CreateAccountHighlightResponseBody, any, {}, any>>;
     /**
      * Permanently deletes an account highlight by ID.  **Rate limit:** 20 requests per minute
      * @summary Delete an account highlight
@@ -3993,7 +3993,7 @@ export declare class AccountHighlightsApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    deleteAccountHighlight(requestParameters: AccountHighlightsApiDeleteAccountHighlightRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<DeleteAccountHighlightResponseBody, any, {}>>;
+    deleteAccountHighlight(requestParameters: AccountHighlightsApiDeleteAccountHighlightRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<DeleteAccountHighlightResponseBody, any, {}, any>>;
     /**
      * Updates an existing account highlight. Only provided fields are modified.  **Rate limit:** 20 requests per minute
      * @summary Update an account highlight
@@ -4001,7 +4001,7 @@ export declare class AccountHighlightsApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    updateAccountHighlight(requestParameters: AccountHighlightsApiUpdateAccountHighlightRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<UpdateAccountHighlightResponseBody, any, {}>>;
+    updateAccountHighlight(requestParameters: AccountHighlightsApiUpdateAccountHighlightRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<UpdateAccountHighlightResponseBody, any, {}, any>>;
 }
 /**
  * AccountsApi - axios parameter creator
@@ -4341,7 +4341,7 @@ export declare class AccountsApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    createAccount(requestParameters?: AccountsApiCreateAccountRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<CreateAccountResponseBody, any, {}>>;
+    createAccount(requestParameters?: AccountsApiCreateAccountRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<CreateAccountResponseBody, any, {}, any>>;
     /**
      * The {id} parameter accepts either:  Internal account ID (UUID format)  External ID (any string format)  **Rate limit:** 20 requests per minute
      * @summary Create a new activity for an account
@@ -4349,7 +4349,7 @@ export declare class AccountsApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    createActivity(requestParameters: AccountsApiCreateActivityRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<CreateActivityResponseBody, any, {}>>;
+    createActivity(requestParameters: AccountsApiCreateActivityRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<CreateActivityResponseBody, any, {}, any>>;
     /**
      * Permanently deletes an account by ID or external ID.  **Rate limit:** 10 requests per minute
      * @summary Delete an existing account
@@ -4357,7 +4357,7 @@ export declare class AccountsApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    deleteAccount(requestParameters: AccountsApiDeleteAccountRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<DeleteAccountResponseBody, any, {}>>;
+    deleteAccount(requestParameters: AccountsApiDeleteAccountRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<DeleteAccountResponseBody, any, {}, any>>;
     /**
      * Returns a single account by ID or external ID.  **Rate limit:** 60 requests per minute
      * @summary Get an account by its ID or external ID
@@ -4365,7 +4365,7 @@ export declare class AccountsApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getAccount(requestParameters: AccountsApiGetAccountRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetAccountResponseBody, any, {}>>;
+    getAccount(requestParameters: AccountsApiGetAccountRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetAccountResponseBody, any, {}, any>>;
     /**
      * Returns a paginated list of accounts for the organization.  **Rate limit:** 60 requests per minute
      * @summary Get a list of accounts
@@ -4373,7 +4373,7 @@ export declare class AccountsApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getAccounts(requestParameters: AccountsApiGetAccountsRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetAccountsResponseBody, any, {}>>;
+    getAccounts(requestParameters: AccountsApiGetAccountsRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetAccountsResponseBody, any, {}, any>>;
     /**
      * Currently, the following fields are filterable for accounts:  * id. Allowed operators: `equals`, `in`, `not_in`  * domains. Allowed operators: `contains`, `does_not_contain`, `in`, `not_in`  * tags. Allowed operators: `contains`, `does_not_contain`, `in`, `not_in`  * name. Allowed operators: `equals`, `in`, `not_in`, `string_contains`  * external_ids. Allowed operators: `equals`, `in`, `not_in`, `is_set`, `is_unset`  * owner_id. Allowed operators: `equals`, `in`, `not_in`, `is_set`, `is_unset`  * custom fields (pass in the slug of the custom field)  **Rate limit:** 20 requests per minute
      * @summary Search for accounts by a given filter
@@ -4381,7 +4381,7 @@ export declare class AccountsApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    searchAccounts(requestParameters?: AccountsApiSearchAccountsRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<SearchAccountsResponseBody, any, {}>>;
+    searchAccounts(requestParameters?: AccountsApiSearchAccountsRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<SearchAccountsResponseBody, any, {}, any>>;
     /**
      * Updates an existing account by ID or external ID. Only provided fields are modified.  **Rate limit:** 60 requests per minute
      * @summary Update an existing account
@@ -4389,7 +4389,7 @@ export declare class AccountsApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    updateAccount(requestParameters: AccountsApiUpdateAccountRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<UpdateAccountResponseBody, any, {}>>;
+    updateAccount(requestParameters: AccountsApiUpdateAccountRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<UpdateAccountResponseBody, any, {}, any>>;
     /**
      * Updates multiple accounts in a single request. Only provided fields are modified.  **Rate limit:** 20 requests per minute
      * @summary Update multiple accounts
@@ -4397,7 +4397,7 @@ export declare class AccountsApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    updateAccounts(requestParameters?: AccountsApiUpdateAccountsRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<UpdateAccountsResponseBody, any, {}>>;
+    updateAccounts(requestParameters?: AccountsApiUpdateAccountsRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<UpdateAccountsResponseBody, any, {}, any>>;
     /**
      * Uploads one or more files to an account by ID or external ID.  **Rate limit:** 10 requests per minute
      * @summary Upload files to an account
@@ -4405,7 +4405,7 @@ export declare class AccountsApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    uploadAccountFile(requestParameters: AccountsApiUploadAccountFileRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<UploadAccountFileResponseBody, any, {}>>;
+    uploadAccountFile(requestParameters: AccountsApiUploadAccountFileRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<UploadAccountFileResponseBody, any, {}, any>>;
 }
 /**
  * ActivityTypesApi - axios parameter creator
@@ -4453,7 +4453,7 @@ export declare class ActivityTypesApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getActivityTypes(options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetActivityTypesResponseBody, any, {}>>;
+    getActivityTypes(options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetActivityTypesResponseBody, any, {}, any>>;
 }
 /**
  * ArticlesApi - axios parameter creator
@@ -4694,7 +4694,7 @@ export declare class ArticlesApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    createArticle(requestParameters: ArticlesApiCreateArticleRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<CreateArticleResponseBody, any, {}>>;
+    createArticle(requestParameters: ArticlesApiCreateArticleRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<CreateArticleResponseBody, any, {}, any>>;
     /**
      * Permanently deletes an article from the knowledge base.  **Rate limit:** 20 requests per minute
      * @summary Delete an article
@@ -4702,7 +4702,7 @@ export declare class ArticlesApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    deleteArticle(requestParameters: ArticlesApiDeleteArticleRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<DeleteArticleResponseBody, any, {}>>;
+    deleteArticle(requestParameters: ArticlesApiDeleteArticleRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<DeleteArticleResponseBody, any, {}, any>>;
     /**
      * Returns a single article by ID within the specified knowledge base.  **Rate limit:** 60 requests per minute
      * @summary Get an article by its ID
@@ -4710,7 +4710,7 @@ export declare class ArticlesApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getArticle(requestParameters: ArticlesApiGetArticleRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetArticleResponseBody, any, {}>>;
+    getArticle(requestParameters: ArticlesApiGetArticleRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetArticleResponseBody, any, {}, any>>;
     /**
      * Returns a paginated list of articles for the specified knowledge base.  **Rate limit:** 20 requests per minute
      * @summary Get all articles in a knowledge base
@@ -4718,7 +4718,7 @@ export declare class ArticlesApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getArticles(requestParameters: ArticlesApiGetArticlesRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetArticlesResponseBody, any, {}>>;
+    getArticles(requestParameters: ArticlesApiGetArticlesRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetArticlesResponseBody, any, {}, any>>;
     /**
      * Updates an existing article. Only provided fields are modified.  **Rate limit:** 20 requests per minute
      * @summary Update an article
@@ -4726,7 +4726,7 @@ export declare class ArticlesApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    updateArticle(requestParameters: ArticlesApiUpdateArticleRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<UpdateArticleResponseBody, any, {}>>;
+    updateArticle(requestParameters: ArticlesApiUpdateArticleRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<UpdateArticleResponseBody, any, {}, any>>;
 }
 /**
  * AttachmentsApi - axios parameter creator
@@ -4799,7 +4799,7 @@ export declare class AttachmentsApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    createAttachment(requestParameters?: AttachmentsApiCreateAttachmentRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<CreateAttachmentResponseBody, any, {}>>;
+    createAttachment(requestParameters?: AttachmentsApiCreateAttachmentRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<CreateAttachmentResponseBody, any, {}, any>>;
 }
 /**
  * AuditLogsApi - axios parameter creator
@@ -4866,7 +4866,7 @@ export declare class AuditLogsApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getAuditLogs(requestParameters?: AuditLogsApiGetAuditLogsRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetAuditLogsResponseBody, any, {}>>;
+    getAuditLogs(requestParameters?: AuditLogsApiGetAuditLogsRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetAuditLogsResponseBody, any, {}, any>>;
 }
 /**
  * CollectionsApi - axios parameter creator
@@ -5041,7 +5041,7 @@ export declare class CollectionsApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    createCollection(requestParameters: CollectionsApiCreateCollectionRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<CreateCollectionResponseBody, any, {}>>;
+    createCollection(requestParameters: CollectionsApiCreateCollectionRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<CreateCollectionResponseBody, any, {}, any>>;
     /**
      * Permanently deletes a collection and all articles within it from the knowledge base. Nested collections and their articles are also deleted.  **Rate limit:** 10 requests per minute
      * @summary Delete a collection
@@ -5049,7 +5049,7 @@ export declare class CollectionsApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    deleteCollection(requestParameters: CollectionsApiDeleteCollectionRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<DeleteCollectionResponseBody, any, {}>>;
+    deleteCollection(requestParameters: CollectionsApiDeleteCollectionRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<DeleteCollectionResponseBody, any, {}, any>>;
     /**
      * Returns a single collection by ID within the specified knowledge base.  **Rate limit:** 20 requests per minute
      * @summary Get a collection by its ID
@@ -5057,7 +5057,7 @@ export declare class CollectionsApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getCollection(requestParameters: CollectionsApiGetCollectionRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetCollectionResponseBody, any, {}>>;
+    getCollection(requestParameters: CollectionsApiGetCollectionRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetCollectionResponseBody, any, {}, any>>;
     /**
      * Returns all collections for the specified knowledge base.  **Rate limit:** 20 requests per minute
      * @summary Get all collections in a knowledge base
@@ -5065,7 +5065,7 @@ export declare class CollectionsApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getCollections(requestParameters: CollectionsApiGetCollectionsRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetCollectionsResponseBody, any, {}>>;
+    getCollections(requestParameters: CollectionsApiGetCollectionsRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetCollectionsResponseBody, any, {}, any>>;
 }
 /**
  * ContactsApi - axios parameter creator
@@ -5288,7 +5288,7 @@ export declare class ContactsApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    createContact(requestParameters?: ContactsApiCreateContactRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<CreateContactResponseBody, any, {}>>;
+    createContact(requestParameters?: ContactsApiCreateContactRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<CreateContactResponseBody, any, {}, any>>;
     /**
      * Permanently deletes a contact by ID.  **Rate limit:** 10 requests per minute
      * @summary Delete an existing contact
@@ -5296,7 +5296,7 @@ export declare class ContactsApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    deleteContact(requestParameters: ContactsApiDeleteContactRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<DeleteContactResponseBody, any, {}>>;
+    deleteContact(requestParameters: ContactsApiDeleteContactRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<DeleteContactResponseBody, any, {}, any>>;
     /**
      * Returns a single contact by ID.  **Rate limit:** 60 requests per minute
      * @summary Get a contact by its ID
@@ -5304,14 +5304,14 @@ export declare class ContactsApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getContact(requestParameters: ContactsApiGetContactRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetContactResponseBody, any, {}>>;
+    getContact(requestParameters: ContactsApiGetContactRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetContactResponseBody, any, {}, any>>;
     /**
      * Returns a paginated list of contacts for the organization.  **Rate limit:** 60 requests per minute
      * @summary Get all contacts
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getContacts(options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetContactsResponseBody, any, {}>>;
+    getContacts(options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetContactsResponseBody, any, {}, any>>;
     /**
      * Currently, the following fields are filterable for contacts:  * id. Allowed operators: `equals`, `in`, `not_in`  * email. Allowed operators: `equals`, `in`, `not_in`, `string_contains`  * custom fields (pass in the slug of the custom field)  * account_id. Allowed operators: `equals`, `in`, `not_in`  **Rate limit:** 20 requests per minute
      * @summary Search for contacts by a given filter
@@ -5319,7 +5319,7 @@ export declare class ContactsApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    searchContacts(requestParameters?: ContactsApiSearchContactsRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<SearchContactsResponseBody, any, {}>>;
+    searchContacts(requestParameters?: ContactsApiSearchContactsRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<SearchContactsResponseBody, any, {}, any>>;
     /**
      * Updates an existing contact. Only provided fields are modified.  **Rate limit:** 60 requests per minute
      * @summary Update an existing contact
@@ -5327,7 +5327,7 @@ export declare class ContactsApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    updateContact(requestParameters: ContactsApiUpdateContactRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<UpdateContactResponseBody, any, {}>>;
+    updateContact(requestParameters: ContactsApiUpdateContactRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<UpdateContactResponseBody, any, {}, any>>;
 }
 /**
  * CustomFieldsApi - axios parameter creator
@@ -5487,7 +5487,7 @@ export declare class CustomFieldsApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    createCustomField(requestParameters?: CustomFieldsApiCreateCustomFieldRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<CreateCustomFieldResponseBody, any, {}>>;
+    createCustomField(requestParameters?: CustomFieldsApiCreateCustomFieldRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<CreateCustomFieldResponseBody, any, {}, any>>;
     /**
      * Returns a single custom field definition by ID.  **Rate limit:** 60 requests per minute
      * @summary Get a custom field by its ID
@@ -5495,7 +5495,7 @@ export declare class CustomFieldsApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getCustomField(requestParameters: CustomFieldsApiGetCustomFieldRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetCustomFieldResponseBody, any, {}>>;
+    getCustomField(requestParameters: CustomFieldsApiGetCustomFieldRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetCustomFieldResponseBody, any, {}, any>>;
     /**
      * Returns all custom field definitions for the specified object type.  **Rate limit:** 60 requests per minute
      * @summary Get all custom fields
@@ -5503,7 +5503,7 @@ export declare class CustomFieldsApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getCustomFields(requestParameters: CustomFieldsApiGetCustomFieldsRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetCustomFieldsResponseBody, any, {}>>;
+    getCustomFields(requestParameters: CustomFieldsApiGetCustomFieldsRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetCustomFieldsResponseBody, any, {}, any>>;
     /**
      * Updates a custom field definition. Only provided fields are modified.  **Rate limit:** 20 requests per minute
      * @summary Update a custom field
@@ -5511,7 +5511,7 @@ export declare class CustomFieldsApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    updateCustomField(requestParameters: CustomFieldsApiUpdateCustomFieldRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<UpdateCustomFieldResponseBody, any, {}>>;
+    updateCustomField(requestParameters: CustomFieldsApiUpdateCustomFieldRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<UpdateCustomFieldResponseBody, any, {}, any>>;
 }
 /**
  * CustomObjectsApi - axios parameter creator
@@ -5776,7 +5776,7 @@ export declare class CustomObjectsApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    createCustomObject(requestParameters: CustomObjectsApiCreateCustomObjectRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<CreateCustomObjectResponseBody, any, {}>>;
+    createCustomObject(requestParameters: CustomObjectsApiCreateCustomObjectRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<CreateCustomObjectResponseBody, any, {}, any>>;
     /**
      * Deletes a custom object instance.  **Rate limit:** 20 requests per minute
      * @summary Delete a custom object
@@ -5784,7 +5784,7 @@ export declare class CustomObjectsApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    deleteCustomObject(requestParameters: CustomObjectsApiDeleteCustomObjectRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<DeleteCustomObjectResponseBody, any, {}>>;
+    deleteCustomObject(requestParameters: CustomObjectsApiDeleteCustomObjectRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<DeleteCustomObjectResponseBody, any, {}, any>>;
     /**
      * Returns a single custom object by ID, including its custom field values.  **Rate limit:** 60 requests per minute
      * @summary Get a custom object
@@ -5792,7 +5792,7 @@ export declare class CustomObjectsApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getCustomObject(requestParameters: CustomObjectsApiGetCustomObjectRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetCustomObjectResponseBody, any, {}>>;
+    getCustomObject(requestParameters: CustomObjectsApiGetCustomObjectRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetCustomObjectResponseBody, any, {}, any>>;
     /**
      * Returns paginated custom objects of the given type.  **Rate limit:** 60 requests per minute
      * @summary List custom objects
@@ -5800,7 +5800,7 @@ export declare class CustomObjectsApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getCustomObjects(requestParameters: CustomObjectsApiGetCustomObjectsRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetCustomObjectsResponseBody, any, {}>>;
+    getCustomObjects(requestParameters: CustomObjectsApiGetCustomObjectsRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetCustomObjectsResponseBody, any, {}, any>>;
     /**
      * Currently, the following fields are filterable for custom objects:  * name. Allowed operators: `equals`, `in`, `not_in`, `string_contains`, `string_does_not_contain`, `is_set`, `is_unset`  * custom fields (pass in the slug of the custom field)  **Rate limit:** 20 requests per minute
      * @summary Search for custom objects by a given filter
@@ -5808,7 +5808,7 @@ export declare class CustomObjectsApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    searchCustomObjects(requestParameters: CustomObjectsApiSearchCustomObjectsRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<SearchCustomObjectsResponseBody, any, {}>>;
+    searchCustomObjects(requestParameters: CustomObjectsApiSearchCustomObjectsRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<SearchCustomObjectsResponseBody, any, {}, any>>;
     /**
      * Updates a custom object. Only provided fields are modified.  **Rate limit:** 20 requests per minute
      * @summary Update a custom object
@@ -5816,7 +5816,7 @@ export declare class CustomObjectsApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    updateCustomObject(requestParameters: CustomObjectsApiUpdateCustomObjectRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<UpdateCustomObjectResponseBody, any, {}>>;
+    updateCustomObject(requestParameters: CustomObjectsApiUpdateCustomObjectRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<UpdateCustomObjectResponseBody, any, {}, any>>;
 }
 /**
  * FeatureRequestsApi - axios parameter creator
@@ -5982,7 +5982,7 @@ export declare class FeatureRequestsApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    deleteFeatureRequest(requestParameters: FeatureRequestsApiDeleteFeatureRequestRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<DeleteFeatureRequestResponseBody, any, {}>>;
+    deleteFeatureRequest(requestParameters: FeatureRequestsApiDeleteFeatureRequestRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<DeleteFeatureRequestResponseBody, any, {}, any>>;
     /**
      * Returns a single feature request by ID. Optionally includes evidence items when fetch_evidence is true.  **Rate limit:** 60 requests per minute
      * @summary Get a feature request by ID
@@ -5990,7 +5990,7 @@ export declare class FeatureRequestsApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getFeatureRequest(requestParameters: FeatureRequestsApiGetFeatureRequestRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetFeatureRequestResponseBody, any, {}>>;
+    getFeatureRequest(requestParameters: FeatureRequestsApiGetFeatureRequestRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetFeatureRequestResponseBody, any, {}, any>>;
     /**
      * Returns feature requests matching the given criteria. Supports semantic search, status filtering, and pagination.  **Rate limit:** 20 requests per minute
      * @summary Search or list feature requests
@@ -5998,7 +5998,7 @@ export declare class FeatureRequestsApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    searchFeatureRequests(requestParameters?: FeatureRequestsApiSearchFeatureRequestsRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<SearchFeatureRequestsResponseBody, any, {}>>;
+    searchFeatureRequests(requestParameters?: FeatureRequestsApiSearchFeatureRequestsRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<SearchFeatureRequestsResponseBody, any, {}, any>>;
     /**
      * Updates an existing feature request. Only provided fields are modified.  **Rate limit:** 20 requests per minute
      * @summary Update a feature request
@@ -6006,7 +6006,7 @@ export declare class FeatureRequestsApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    updateFeatureRequest(requestParameters: FeatureRequestsApiUpdateFeatureRequestRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<UpdateFeatureRequestResponseBody, any, {}>>;
+    updateFeatureRequest(requestParameters: FeatureRequestsApiUpdateFeatureRequestRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<UpdateFeatureRequestResponseBody, any, {}, any>>;
 }
 /**
  * ImportApi - axios parameter creator
@@ -6130,7 +6130,7 @@ export declare class ImportApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    importContact(requestParameters?: ImportApiImportContactRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<ImportContactResponseBody, any, {}>>;
+    importContact(requestParameters?: ImportApiImportContactRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<ImportContactResponseBody, any, {}, any>>;
     /**
      * Imports an issue with its messages and metadata. At least one message is required.  **Rate limit:** 20 requests per minute
      * @summary Import an issue
@@ -6138,7 +6138,7 @@ export declare class ImportApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    importIssue(requestParameters?: ImportApiImportIssueRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<ImportIssueResponseBody, any, {}>>;
+    importIssue(requestParameters?: ImportApiImportIssueRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<ImportIssueResponseBody, any, {}, any>>;
     /**
      * Imports one or more messages onto an existing issue.  **Rate limit:** 20 requests per minute
      * @summary Import messages onto an existing issue
@@ -6146,7 +6146,7 @@ export declare class ImportApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    importMessages(requestParameters: ImportApiImportMessagesRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<ImportMessagesResponseBody, any, {}>>;
+    importMessages(requestParameters: ImportApiImportMessagesRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<ImportMessagesResponseBody, any, {}, any>>;
 }
 /**
  * IssueStatusesApi - axios parameter creator
@@ -6194,7 +6194,7 @@ export declare class IssueStatusesApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getIssueStatuses(options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetIssueStatusesResponseBody, any, {}>>;
+    getIssueStatuses(options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetIssueStatusesResponseBody, any, {}, any>>;
 }
 /**
  * IssuesApi - axios parameter creator
@@ -6600,7 +6600,7 @@ export declare class IssuesApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    addIssueFollowers(requestParameters: IssuesApiAddIssueFollowersRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<AddIssueFollowersResponseBody, any, {}>>;
+    addIssueFollowers(requestParameters: IssuesApiAddIssueFollowersRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<AddIssueFollowersResponseBody, any, {}, any>>;
     /**
      * Creates a new issue with the specified title and body. Requires either an account_id or requester information.  **Rate limit:** 10 requests per minute
      * @summary Create a new issue
@@ -6608,7 +6608,7 @@ export declare class IssuesApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    createIssue(requestParameters?: IssuesApiCreateIssueRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<CreateIssueResponseBody, any, {}>>;
+    createIssue(requestParameters?: IssuesApiCreateIssueRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<CreateIssueResponseBody, any, {}, any>>;
     /**
      * Generates an AI response for the specified issue using the given agent.  **Rate limit:** 20 requests per minute
      * @summary Create an AI response for an issue
@@ -6616,7 +6616,7 @@ export declare class IssuesApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    createIssueAIResponse(requestParameters: IssuesApiCreateIssueAIResponseRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<CreateIssueAIResponseResponseBody, any, {}>>;
+    createIssueAIResponse(requestParameters: IssuesApiCreateIssueAIResponseRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<CreateIssueAIResponseResponseBody, any, {}, any>>;
     /**
      * Permanently deletes an issue by ID.  **Rate limit:** 20 requests per minute
      * @summary Delete an existing issue
@@ -6624,7 +6624,7 @@ export declare class IssuesApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    deleteIssue(requestParameters: IssuesApiDeleteIssueRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<DeleteIssueResponseBody, any, {}>>;
+    deleteIssue(requestParameters: IssuesApiDeleteIssueRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<DeleteIssueResponseBody, any, {}, any>>;
     /**
      * Returns a single issue by ID or issue number.  **Rate limit:** 60 requests per minute
      * @summary Get an issue by its ID/number
@@ -6632,7 +6632,7 @@ export declare class IssuesApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getIssue(requestParameters: IssuesApiGetIssueRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetIssueResponseBody, any, {}>>;
+    getIssue(requestParameters: IssuesApiGetIssueRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetIssueResponseBody, any, {}, any>>;
     /**
      * Returns the list of followers for the specified issue.  **Rate limit:** 60 requests per minute
      * @summary Get followers of an issue
@@ -6640,7 +6640,7 @@ export declare class IssuesApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getIssueFollowers(requestParameters: IssuesApiGetIssueFollowersRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetIssueFollowersResponseBody, any, {}>>;
+    getIssueFollowers(requestParameters: IssuesApiGetIssueFollowersRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetIssueFollowersResponseBody, any, {}, any>>;
     /**
      * Returns a paginated list of issues within a required time range (max 30 days).  **Rate limit:** 10 requests per minute
      * @summary Get a list of issues
@@ -6648,7 +6648,7 @@ export declare class IssuesApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getIssues(requestParameters: IssuesApiGetIssuesRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetIssuesResponseBody, any, {}>>;
+    getIssues(requestParameters: IssuesApiGetIssuesRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetIssuesResponseBody, any, {}, any>>;
     /**
      * By default, links external issues. To unlink issues, set the operation field to \"unlink\".  **Rate limit:** 20 requests per minute
      * @summary Link or unlink external issues to/from an issue
@@ -6656,7 +6656,7 @@ export declare class IssuesApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    linkExternalIssue(requestParameters: IssuesApiLinkExternalIssueRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<LinkExternalIssueResponseBody, any, {}>>;
+    linkExternalIssue(requestParameters: IssuesApiLinkExternalIssueRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<LinkExternalIssueResponseBody, any, {}, any>>;
     /**
      * Currently, the following fields are filterable for issues:  * created_at (in RFC3339 format). Allowed operators: `time_is_after`, `time_is_before`, `time_range`  * account_id. Allowed operators: `equals`, `in`, `not_in`, `is_set`, `is_unset`  * ticket_form_id. Allowed operators: `equals`, `in`, `not_in`, `is_set`, `is_unset`  * requester_id. Allowed operators: `equals`, `in`, `not_in`, `is_set`, `is_unset`  * follower_user_id. Allowed operators: `equals`, `in`, `not_in`  * follower_contact_id. Allowed operators: `equals`, `in`, `not_in`  * state. Valid values are `[\"new\", \"waiting_on_you\", \"waiting_on_customer\", \"on_hold\", \"closed\"]` or a custom status slug. Allowed operators: `equals`, `in`, `not_in`  * custom fields (pass in the slug of the custom field)  * tags (pass in the tag name). Allowed operators: `contains`, `does_not_contain`, `in`, `not_in`  * title. Allowed operators: `string_contains`, `string_does_not_contain`  * body_html. Allowed operators: `string_contains`, `string_does_not_contain`  * assignee_id. Allowed operators: `equals`, `in`, `not_in`, `is_set`, `is_unset`  * team_id. Allowed operators: `equals`, `in`, `not_in`  * issue_type. Valid values are `[\"conversation\", \"ticket\"]`. Allowed operators: `equals`, `in`, `not_in`, `is_set`, `is_unset`  * resolved_at. Allowed operators: `time_is_after`, `time_is_before`, `time_range`  * latest_message_activity_at. Allowed operators: `time_is_after`, `time_is_before`, `time_range`  * updated_at (in RFC3339 format). Allowed operators: `time_is_after`, `time_is_before`, `time_range`  **Rate limit:** 20 requests per minute
      * @summary Search for issues by a given filter
@@ -6664,7 +6664,7 @@ export declare class IssuesApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    searchIssues(requestParameters?: IssuesApiSearchIssuesRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<SearchIssuesResponseBody, any, {}>>;
+    searchIssues(requestParameters?: IssuesApiSearchIssuesRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<SearchIssuesResponseBody, any, {}, any>>;
     /**
      * Snoozes an issue until the specified date and time.  **Rate limit:** 20 requests per minute
      * @summary Snooze an issue
@@ -6672,7 +6672,7 @@ export declare class IssuesApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    snoozeIssue(requestParameters: IssuesApiSnoozeIssueRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<SnoozeIssueResponseBody, any, {}>>;
+    snoozeIssue(requestParameters: IssuesApiSnoozeIssueRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<SnoozeIssueResponseBody, any, {}, any>>;
     /**
      * Updates an existing issue. Only provided fields are modified.  **Rate limit:** 20 requests per minute
      * @summary Update an existing issue
@@ -6680,7 +6680,7 @@ export declare class IssuesApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    updateIssue(requestParameters: IssuesApiUpdateIssueRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<UpdateIssueResponseBody, any, {}>>;
+    updateIssue(requestParameters: IssuesApiUpdateIssueRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<UpdateIssueResponseBody, any, {}, any>>;
 }
 /**
  * KnowledgeBasesApi - axios parameter creator
@@ -6762,14 +6762,14 @@ export declare class KnowledgeBasesApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getKnowledgeBase(requestParameters: KnowledgeBasesApiGetKnowledgeBaseRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetKnowledgeBaseResponseBody, any, {}>>;
+    getKnowledgeBase(requestParameters: KnowledgeBasesApiGetKnowledgeBaseRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetKnowledgeBaseResponseBody, any, {}, any>>;
     /**
      * Returns all knowledge bases for the organization.  **Rate limit:** 60 requests per minute
      * @summary Get all knowledge bases
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getKnowledgeBases(options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetKnowledgeBasesResponseBody, any, {}>>;
+    getKnowledgeBases(options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetKnowledgeBasesResponseBody, any, {}, any>>;
 }
 /**
  * MacrosApi - axios parameter creator
@@ -6950,7 +6950,7 @@ export declare class MacrosApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    createMacro(requestParameters?: MacrosApiCreateMacroRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<CreateMacroResponseBody, any, {}>>;
+    createMacro(requestParameters?: MacrosApiCreateMacroRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<CreateMacroResponseBody, any, {}, any>>;
     /**
      * Returns a single macro by ID.  **Rate limit:** 60 requests per minute
      * @summary Get a macro by its ID
@@ -6958,14 +6958,14 @@ export declare class MacrosApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getMacro(requestParameters: MacrosApiGetMacroRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetMacroResponseBody, any, {}>>;
+    getMacro(requestParameters: MacrosApiGetMacroRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetMacroResponseBody, any, {}, any>>;
     /**
      * Returns all macro groups for the organization.  **Rate limit:** 60 requests per minute
      * @summary Get all macro groups
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getMacroGroups(options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetMacroGroupsResponseBody, any, {}>>;
+    getMacroGroups(options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetMacroGroupsResponseBody, any, {}, any>>;
     /**
      * Returns all macros for the organization. Optionally filter by macro group ID.  **Rate limit:** 60 requests per minute
      * @summary Get all macros
@@ -6973,7 +6973,7 @@ export declare class MacrosApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getMacros(requestParameters?: MacrosApiGetMacrosRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetMacrosResponseBody, any, {}>>;
+    getMacros(requestParameters?: MacrosApiGetMacrosRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetMacrosResponseBody, any, {}, any>>;
     /**
      * Updates an existing macro by ID. All fields are optional; only provided fields will be updated.  **Rate limit:** 60 requests per minute
      * @summary Update a macro
@@ -6981,7 +6981,7 @@ export declare class MacrosApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    updateMacro(requestParameters: MacrosApiUpdateMacroRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<UpdateMacroResponseBody, any, {}>>;
+    updateMacro(requestParameters: MacrosApiUpdateMacroRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<UpdateMacroResponseBody, any, {}, any>>;
 }
 /**
  * MeApi - axios parameter creator
@@ -7029,7 +7029,7 @@ export declare class MeApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getMe(options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetMeResponseBody, any, {}>>;
+    getMe(options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetMeResponseBody, any, {}, any>>;
 }
 /**
  * MessagesApi - axios parameter creator
@@ -7309,7 +7309,7 @@ export declare class MessagesApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    createIssueNote(requestParameters: MessagesApiCreateIssueNoteRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<CreateIssueNoteResponseBody, any, {}>>;
+    createIssueNote(requestParameters: MessagesApiCreateIssueNoteRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<CreateIssueNoteResponseBody, any, {}, any>>;
     /**
      * Sends a customer-facing reply on an issue, visible to the requester.  **Rate limit:** 10 requests per minute
      * @summary Reply to an issue
@@ -7317,7 +7317,7 @@ export declare class MessagesApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    createIssueReply(requestParameters: MessagesApiCreateIssueReplyRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<CreateIssueReplyResponseBody, any, {}>>;
+    createIssueReply(requestParameters: MessagesApiCreateIssueReplyRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<CreateIssueReplyResponseBody, any, {}, any>>;
     /**
      * Creates a new internal thread on an issue.  **Rate limit:** 20 requests per minute
      * @summary Create a thread on an issue
@@ -7325,7 +7325,7 @@ export declare class MessagesApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    createIssueThread(requestParameters: MessagesApiCreateIssueThreadRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<CreateIssueThreadResponseBody, any, {}>>;
+    createIssueThread(requestParameters: MessagesApiCreateIssueThreadRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<CreateIssueThreadResponseBody, any, {}, any>>;
     /**
      * Permanently deletes a message from an issue and its connected external system.  **Rate limit:** 10 requests per minute
      * @summary Delete a message
@@ -7333,7 +7333,7 @@ export declare class MessagesApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    deleteMessage(requestParameters: MessagesApiDeleteMessageRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<DeleteMessageResponseBody, any, {}>>;
+    deleteMessage(requestParameters: MessagesApiDeleteMessageRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<DeleteMessageResponseBody, any, {}, any>>;
     /**
      * Returns all messages for the specified issue, including replies and internal notes.  **Rate limit:** 20 requests per minute
      * @summary Get all messages on an issue
@@ -7341,7 +7341,7 @@ export declare class MessagesApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getIssueMessages(requestParameters: MessagesApiGetIssueMessagesRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetIssueMessagesResponseBody, any, {}>>;
+    getIssueMessages(requestParameters: MessagesApiGetIssueMessagesRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetIssueMessagesResponseBody, any, {}, any>>;
     /**
      * Returns all threads for the specified issue.  **Rate limit:** 20 requests per minute
      * @summary Get all threads on an issue
@@ -7349,7 +7349,7 @@ export declare class MessagesApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getIssueThreads(requestParameters: MessagesApiGetIssueThreadsRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetIssueThreadsResponseBody, any, {}>>;
+    getIssueThreads(requestParameters: MessagesApiGetIssueThreadsRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetIssueThreadsResponseBody, any, {}, any>>;
     /**
      * Permanently redacts a message\'s content. This action cannot be undone.  **Rate limit:** 20 requests per minute
      * @summary Redact a message
@@ -7357,7 +7357,7 @@ export declare class MessagesApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    redactMessage(requestParameters: MessagesApiRedactMessageRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<RedactMessageResponseBody, any, {}>>;
+    redactMessage(requestParameters: MessagesApiRedactMessageRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<RedactMessageResponseBody, any, {}, any>>;
 }
 /**
  * MilestonesApi - axios parameter creator
@@ -7484,7 +7484,7 @@ export declare class MilestonesApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    createMilestone(requestParameters?: MilestonesApiCreateMilestoneRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<CreateMilestoneResponseBody, any, {}>>;
+    createMilestone(requestParameters?: MilestonesApiCreateMilestoneRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<CreateMilestoneResponseBody, any, {}, any>>;
     /**
      * Permanently deletes a milestone by ID.  **Rate limit:** 60 requests per minute
      * @summary Delete a milestone
@@ -7492,7 +7492,7 @@ export declare class MilestonesApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    deleteMilestone(requestParameters: MilestonesApiDeleteMilestoneRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<DeleteMilestoneResponseBody, any, {}>>;
+    deleteMilestone(requestParameters: MilestonesApiDeleteMilestoneRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<DeleteMilestoneResponseBody, any, {}, any>>;
     /**
      * Updates an existing milestone. Only provided fields are modified.  **Rate limit:** 60 requests per minute
      * @summary Update a milestone
@@ -7500,7 +7500,7 @@ export declare class MilestonesApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    updateMilestone(requestParameters: MilestonesApiUpdateMilestoneRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<UpdateMilestoneResponseBody, any, {}>>;
+    updateMilestone(requestParameters: MilestonesApiUpdateMilestoneRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<UpdateMilestoneResponseBody, any, {}, any>>;
 }
 /**
  * ProjectsApi - axios parameter creator
@@ -7657,7 +7657,7 @@ export declare class ProjectsApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    createProject(requestParameters?: ProjectsApiCreateProjectRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<CreateProjectResponseBody, any, {}>>;
+    createProject(requestParameters?: ProjectsApiCreateProjectRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<CreateProjectResponseBody, any, {}, any>>;
     /**
      * Permanently deletes a project by ID.  **Rate limit:** 20 requests per minute
      * @summary Delete an existing project
@@ -7665,7 +7665,7 @@ export declare class ProjectsApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    deleteProject(requestParameters: ProjectsApiDeleteProjectRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<DeleteProjectResponseBody, any, {}>>;
+    deleteProject(requestParameters: ProjectsApiDeleteProjectRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<DeleteProjectResponseBody, any, {}, any>>;
     /**
      * Currently, the following fields are filterable for projects:  * account_id. Allowed operators: `equals`, `in`, `not_in`, `is_set`  * status. Valid values are `[\"not_started\", \"in_progress\", \"completed\"]`. Allowed operators: `equals`, `in`, `not_in`  * owner_id. Allowed operators: `equals`, `in`, `not_in`, `is_set`, `is_unset`  * is_archived. Allowed operators: `equals`  * created_at (in RFC3339 format). Allowed operators: `time_is_after`, `time_is_before`, `time_range`  * updated_at (in RFC3339 format). Allowed operators: `time_is_after`, `time_is_before`, `time_range`  **Rate limit:** 20 requests per minute
      * @summary Search for projects by a given filter
@@ -7673,7 +7673,7 @@ export declare class ProjectsApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    searchProjects(requestParameters?: ProjectsApiSearchProjectsRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<SearchProjectsResponseBody, any, {}>>;
+    searchProjects(requestParameters?: ProjectsApiSearchProjectsRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<SearchProjectsResponseBody, any, {}, any>>;
     /**
      * Updates an existing project. Only provided fields are modified.  **Rate limit:** 60 requests per minute
      * @summary Update a project
@@ -7681,7 +7681,7 @@ export declare class ProjectsApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    updateProject(requestParameters: ProjectsApiUpdateProjectRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<UpdateProjectResponseBody, any, {}>>;
+    updateProject(requestParameters: ProjectsApiUpdateProjectRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<UpdateProjectResponseBody, any, {}, any>>;
 }
 /**
  * RouteRedirectsApi - axios parameter creator
@@ -7745,7 +7745,7 @@ export declare class RouteRedirectsApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    createRouteRedirect(requestParameters: RouteRedirectsApiCreateRouteRedirectRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<CreateRouteRedirectResponseBody, any, {}>>;
+    createRouteRedirect(requestParameters: RouteRedirectsApiCreateRouteRedirectRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<CreateRouteRedirectResponseBody, any, {}, any>>;
 }
 /**
  * SurveysApi - axios parameter creator
@@ -7926,7 +7926,7 @@ export declare class SurveysApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getSurvey(requestParameters: SurveysApiGetSurveyRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetSurveyResponseBody, any, {}>>;
+    getSurvey(requestParameters: SurveysApiGetSurveyRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetSurveyResponseBody, any, {}, any>>;
     /**
      * Returns paginated survey responses, optionally filtered by time range, account, or contact.  **Rate limit:** 60 requests per minute
      * @summary Get survey responses for a survey
@@ -7934,14 +7934,14 @@ export declare class SurveysApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getSurveyResponses(requestParameters: SurveysApiGetSurveyResponsesRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetSurveyResponsesResponseBody, any, {}>>;
+    getSurveyResponses(requestParameters: SurveysApiGetSurveyResponsesRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetSurveyResponsesResponseBody, any, {}, any>>;
     /**
      * Returns all surveys for the organization.  **Rate limit:** 60 requests per minute
      * @summary Get all surveys
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getSurveys(options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetSurveysResponseBody, any, {}>>;
+    getSurveys(options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetSurveysResponseBody, any, {}, any>>;
     /**
      * Currently, the following fields are filterable for surveys:  * updated_at (in RFC3339 format). Allowed operators: `time_is_after`, `time_is_before`, `time_range`  **Rate limit:** 20 requests per minute
      * @summary Search for surveys by a given filter
@@ -7949,7 +7949,7 @@ export declare class SurveysApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    searchSurveys(requestParameters?: SurveysApiSearchSurveysRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<SearchSurveysResponseBody, any, {}>>;
+    searchSurveys(requestParameters?: SurveysApiSearchSurveysRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<SearchSurveysResponseBody, any, {}, any>>;
 }
 /**
  * TagsApi - axios parameter creator
@@ -8130,7 +8130,7 @@ export declare class TagsApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    createTag(requestParameters?: TagsApiCreateTagRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<CreateTagResponseBody, any, {}>>;
+    createTag(requestParameters?: TagsApiCreateTagRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<CreateTagResponseBody, any, {}, any>>;
     /**
      * Permanently deletes a tag by ID.  **Rate limit:** 10 requests per minute
      * @summary Delete an existing tag
@@ -8138,7 +8138,7 @@ export declare class TagsApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    deleteTag(requestParameters: TagsApiDeleteTagRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<DeleteTagResponseBody, any, {}>>;
+    deleteTag(requestParameters: TagsApiDeleteTagRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<DeleteTagResponseBody, any, {}, any>>;
     /**
      * Returns a single tag by ID.  **Rate limit:** 60 requests per minute
      * @summary Get a tag by its ID
@@ -8146,14 +8146,14 @@ export declare class TagsApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getTag(requestParameters: TagsApiGetTagRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetTagResponseBody, any, {}>>;
+    getTag(requestParameters: TagsApiGetTagRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetTagResponseBody, any, {}, any>>;
     /**
      * Returns all tags for the organization.  **Rate limit:** 60 requests per minute
      * @summary Get all tags
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getTags(options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetTagsResponseBody, any, {}>>;
+    getTags(options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetTagsResponseBody, any, {}, any>>;
     /**
      * Updates an existing tag. Only provided fields are modified.  **Rate limit:** 10 requests per minute
      * @summary Update an existing tag
@@ -8161,7 +8161,7 @@ export declare class TagsApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    updateTag(requestParameters: TagsApiUpdateTagRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<UpdateTagResponseBody, any, {}>>;
+    updateTag(requestParameters: TagsApiUpdateTagRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<UpdateTagResponseBody, any, {}, any>>;
 }
 /**
  * TasksApi - axios parameter creator
@@ -8390,7 +8390,7 @@ export declare class TasksApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    createTask(requestParameters?: TasksApiCreateTaskRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<CreateTaskResponseBody, any, {}>>;
+    createTask(requestParameters?: TasksApiCreateTaskRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<CreateTaskResponseBody, any, {}, any>>;
     /**
      * Permanently deletes a task by ID.  **Rate limit:** 20 requests per minute
      * @summary Delete an existing task
@@ -8398,7 +8398,7 @@ export declare class TasksApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    deleteTask(requestParameters: TasksApiDeleteTaskRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<DeleteTaskResponseBody, any, {}>>;
+    deleteTask(requestParameters: TasksApiDeleteTaskRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<DeleteTaskResponseBody, any, {}, any>>;
     /**
      * Returns a single task by ID.  **Rate limit:** 60 requests per minute
      * @summary Get a task by its ID
@@ -8406,7 +8406,7 @@ export declare class TasksApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getTask(requestParameters: TasksApiGetTaskRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetTaskResponseBody, any, {}>>;
+    getTask(requestParameters: TasksApiGetTaskRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetTaskResponseBody, any, {}, any>>;
     /**
      * Returns a paginated list of tasks for the organization.  **Rate limit:** 60 requests per minute
      * @summary Get all tasks
@@ -8414,7 +8414,7 @@ export declare class TasksApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getTasks(requestParameters?: TasksApiGetTasksRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetTasksResponseBody, any, {}>>;
+    getTasks(requestParameters?: TasksApiGetTasksRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetTasksResponseBody, any, {}, any>>;
     /**
      * Currently, the following fields are filterable for tasks:  * account_id. Allowed operators: `equals`, `in`, `not_in`, `is_set`  * project_id. Allowed operators: `equals`, `in`, `not_in`, `is_set`, `is_unset`  * status. Valid values are `[\"not_started\", \"in_progress\", \"completed\"]`. Allowed operators: `equals`, `in`, `not_in`  * assignee_id. Allowed operators: `equals`, `in`, `not_in`, `is_set`  * milestone_id. Allowed operators: `equals`, `in`, `not_in`, `is_set`  * created_at (in RFC3339 format). Allowed operators: `time_is_after`, `time_is_before`, `time_range`  * due_date (in RFC3339 format). Allowed operators: `time_is_after`, `time_is_before`, `time_range`, `is_set`  * updated_at (in RFC3339 format). Allowed operators: `time_is_after`, `time_is_before`, `time_range`  **Rate limit:** 20 requests per minute
      * @summary Search for tasks by a given filter
@@ -8422,7 +8422,7 @@ export declare class TasksApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    searchTasks(requestParameters?: TasksApiSearchTasksRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<SearchTasksResponseBody, any, {}>>;
+    searchTasks(requestParameters?: TasksApiSearchTasksRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<SearchTasksResponseBody, any, {}, any>>;
     /**
      * Updates an existing task. Only provided fields are modified.  **Rate limit:** 60 requests per minute
      * @summary Update a task
@@ -8430,7 +8430,7 @@ export declare class TasksApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    updateTask(requestParameters: TasksApiUpdateTaskRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<UpdateTaskResponseBody, any, {}>>;
+    updateTask(requestParameters: TasksApiUpdateTaskRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<UpdateTaskResponseBody, any, {}, any>>;
 }
 /**
  * TeamsApi - axios parameter creator
@@ -8578,7 +8578,7 @@ export declare class TeamsApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    createTeam(requestParameters?: TeamsApiCreateTeamRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<CreateTeamResponseBody, any, {}>>;
+    createTeam(requestParameters?: TeamsApiCreateTeamRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<CreateTeamResponseBody, any, {}, any>>;
     /**
      * Returns a single team by ID.  **Rate limit:** 60 requests per minute
      * @summary Get a team by its ID
@@ -8586,14 +8586,14 @@ export declare class TeamsApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getTeam(requestParameters: TeamsApiGetTeamRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetTeamResponseBody, any, {}>>;
+    getTeam(requestParameters: TeamsApiGetTeamRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetTeamResponseBody, any, {}, any>>;
     /**
      * Returns all teams for the organization.  **Rate limit:** 60 requests per minute
      * @summary Get a list of teams
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getTeams(options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetTeamsResponseBody, any, {}>>;
+    getTeams(options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetTeamsResponseBody, any, {}, any>>;
     /**
      * Updates an existing team. Only provided fields are modified.  **Rate limit:** 20 requests per minute
      * @summary Update an existing team
@@ -8601,7 +8601,7 @@ export declare class TeamsApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    updateTeam(requestParameters: TeamsApiUpdateTeamRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<UpdateTeamResponseBody, any, {}>>;
+    updateTeam(requestParameters: TeamsApiUpdateTeamRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<UpdateTeamResponseBody, any, {}, any>>;
 }
 /**
  * TicketFormsApi - axios parameter creator
@@ -8683,14 +8683,14 @@ export declare class TicketFormsApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getTicketForm(requestParameters: TicketFormsApiGetTicketFormRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetTicketFormResponseBody, any, {}>>;
+    getTicketForm(requestParameters: TicketFormsApiGetTicketFormRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetTicketFormResponseBody, any, {}, any>>;
     /**
      * Returns all ticket forms for the organization.  **Rate limit:** 60 requests per minute
      * @summary Get a list of ticket forms
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getTicketForms(options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetTicketFormsResponseBody, any, {}>>;
+    getTicketForms(options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetTicketFormsResponseBody, any, {}, any>>;
 }
 /**
  * TrainingDataApi - axios parameter creator
@@ -8940,7 +8940,7 @@ export declare class TrainingDataApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    createTrainingData(requestParameters?: TrainingDataApiCreateTrainingDataRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<CreateTrainingDataResponseBody, any, {}>>;
+    createTrainingData(requestParameters?: TrainingDataApiCreateTrainingDataRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<CreateTrainingDataResponseBody, any, {}, any>>;
     /**
      * Removes documents from a training data configuration by document ID or external ID.  **Rate limit:** 10 requests per minute
      * @summary Delete training data documents
@@ -8948,7 +8948,7 @@ export declare class TrainingDataApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    deleteTrainingDataDocuments(requestParameters: TrainingDataApiDeleteTrainingDataDocumentsRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<DeleteTrainingDataDocumentsResponseBody, any, {}>>;
+    deleteTrainingDataDocuments(requestParameters: TrainingDataApiDeleteTrainingDataDocumentsRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<DeleteTrainingDataDocumentsResponseBody, any, {}, any>>;
     /**
      * Returns a single training data configuration by ID.  **Rate limit:** 60 requests per minute
      * @summary Get a training data configuration by its ID
@@ -8956,14 +8956,14 @@ export declare class TrainingDataApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getTrainingData(requestParameters: TrainingDataApiGetTrainingDataRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetTrainingDataResponseBody, any, {}>>;
+    getTrainingData(requestParameters: TrainingDataApiGetTrainingDataRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetTrainingDataResponseBody, any, {}, any>>;
     /**
      * Returns all training data configurations for the organization.  **Rate limit:** 60 requests per minute
      * @summary List all training data configurations
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    listTrainingData(options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<ListTrainingDataResponseBody, any, {}>>;
+    listTrainingData(options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<ListTrainingDataResponseBody, any, {}, any>>;
     /**
      * Uploads plain text content as a training data document.
      * @summary Upload text content as training data
@@ -8971,7 +8971,7 @@ export declare class TrainingDataApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    uploadTrainingDataFileContent(requestParameters?: TrainingDataApiUploadTrainingDataFileContentRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<TrainingDataUploadResponseBody, any, {}>>;
+    uploadTrainingDataFileContent(requestParameters?: TrainingDataApiUploadTrainingDataFileContentRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<TrainingDataUploadResponseBody, any, {}, any>>;
     /**
      * Uploads one or more files to a training data configuration.  **Rate limit:** 10 requests per minute
      * @summary Upload files as training data
@@ -8979,7 +8979,7 @@ export declare class TrainingDataApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    uploadTrainingDataFiles(requestParameters: TrainingDataApiUploadTrainingDataFilesRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<TrainingDataUploadResponseBody, any, {}>>;
+    uploadTrainingDataFiles(requestParameters: TrainingDataApiUploadTrainingDataFilesRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<TrainingDataUploadResponseBody, any, {}, any>>;
 }
 /**
  * UserApi - axios parameter creator
@@ -9076,7 +9076,7 @@ export declare class UserApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getUser(requestParameters: UserApiGetUserRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetUserResponseBody, any, {}>>;
+    getUser(requestParameters: UserApiGetUserRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetUserResponseBody, any, {}, any>>;
     /**
      * Updates an existing user. Only provided fields are modified.  **Rate limit:** 20 requests per minute
      * @summary Update a user
@@ -9084,7 +9084,7 @@ export declare class UserApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    updateUser(requestParameters: UserApiUpdateUserRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetUserResponseBody, any, {}>>;
+    updateUser(requestParameters: UserApiUpdateUserRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetUserResponseBody, any, {}, any>>;
 }
 /**
  * UserRolesApi - axios parameter creator
@@ -9132,7 +9132,7 @@ export declare class UserRolesApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getUserRoles(options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetUserRolesResponseBody, any, {}>>;
+    getUserRoles(options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetUserRolesResponseBody, any, {}, any>>;
 }
 /**
  * UsersApi - axios parameter creator
@@ -9210,7 +9210,7 @@ export declare class UsersApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getUsers(options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetUsersResponseBody, any, {}>>;
+    getUsers(options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<GetUsersResponseBody, any, {}, any>>;
     /**
      * Currently, the following fields are filterable for users:  * email. Allowed operators: `equals`, `in`, `not_in`  **Rate limit:** 20 requests per minute
      * @summary Search for users by a given filter
@@ -9218,5 +9218,5 @@ export declare class UsersApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    searchUsers(requestParameters?: UsersApiSearchUsersRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<SearchUsersResponseBody, any, {}>>;
+    searchUsers(requestParameters?: UsersApiSearchUsersRequest, options?: RawAxiosRequestConfig): Promise<globalAxios.AxiosResponse<SearchUsersResponseBody, any, {}, any>>;
 }
