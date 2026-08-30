@@ -28,12 +28,12 @@ const base_1 = require("./base");
 exports.ContactPortalRoleEnum = {
     NoAccess: 'no_access',
     Member: 'member',
-    Admin: 'admin'
+    Admin: 'admin',
 };
 exports.CreateContactRequestBodyPortalRoleEnum = {
     NoAccess: 'no_access',
     Member: 'member',
-    Admin: 'admin'
+    Admin: 'admin',
 };
 exports.DestinationMetadataDestinationEnum = {
     Slack: 'slack',
@@ -41,7 +41,7 @@ exports.DestinationMetadataDestinationEnum = {
     InAppChat: 'in_app_chat',
     Internal: 'internal',
     Sms: 'sms',
-    Whatsapp: 'whatsapp'
+    Whatsapp: 'whatsapp',
 };
 exports.FilterOperatorEnum = {
     Equals: 'equals',
@@ -62,16 +62,16 @@ exports.FilterOperatorEnum = {
     GreaterThan: 'greater_than',
     LessThan: 'less_than',
     GreaterThanOrEquals: 'greater_than_or_equals',
-    LessThanOrEquals: 'less_than_or_equals'
+    LessThanOrEquals: 'less_than_or_equals',
 };
 exports.FollowerTypeEnum = {
     User: 'user',
-    Contact: 'contact'
+    Contact: 'contact',
 };
 exports.ImportContactRequestBodyPortalRoleEnum = {
     NoAccess: 'no_access',
     Member: 'member',
-    Admin: 'admin'
+    Admin: 'admin',
 };
 exports.IssueSourceEnum = {
     Slack: 'slack',
@@ -85,47 +85,47 @@ exports.IssueSourceEnum = {
     Whatsapp: 'whatsapp',
     Sms: 'sms',
     Telegram: 'telegram',
-    Phone: 'phone'
+    Phone: 'phone',
 };
 exports.IssueTypeEnum = {
     Conversation: 'conversation',
-    Ticket: 'ticket'
+    Ticket: 'ticket',
 };
 exports.NumberMetadataFormatEnum = {
     WithCommas: 'with_commas',
     Percent: 'percent',
     Currency: 'currency',
-    Duration: 'duration'
+    Duration: 'duration',
 };
 exports.SurveyTypeEnum = {
     Nps: 'nps',
     Csat: 'csat',
-    Custom: 'custom'
+    Custom: 'custom',
 };
 exports.UpdateContactRequestBodyPortalRoleEnum = {
     NoAccess: 'no_access',
     Member: 'member',
-    Admin: 'admin'
+    Admin: 'admin',
 };
 exports.UpdateIssueRequestBodyTypeEnum = {
     Conversation: 'conversation',
-    Ticket: 'ticket'
+    Ticket: 'ticket',
 };
 exports.VisibilityConfigAiAgentAccessEnum = {
     Inherit: 'inherit',
     None: 'none',
-    SpecificAgents: 'specific_agents'
+    SpecificAgents: 'specific_agents',
 };
 exports.VisibilityConfigVisibilityEnum = {
     Public: 'public',
     Customer: 'customer',
-    InternalOnly: 'internal_only'
+    InternalOnly: 'internal_only',
 };
 exports.VisibilityInputTypeEnum = {
     Org: 'org',
     User: 'user',
     Team: 'team',
-    UsersAndTeams: 'users_and_teams'
+    UsersAndTeams: 'users_and_teams',
 };
 /**
  * AccountHighlightsApi - axios parameter creator
@@ -144,7 +144,7 @@ const AccountHighlightsApiAxiosParamCreator = function (configuration) {
             // verify required parameter 'accountId' is not null or undefined
             (0, common_1.assertParamExists)('createAccountHighlight', 'accountId', accountId);
             const localVarPath = `/accounts/{account_id}/highlights`
-                .replace(`{${"account_id"}}`, encodeURIComponent(String(accountId)));
+                .replace('{account_id}', encodeURIComponent(String(accountId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
             let baseOptions;
@@ -182,8 +182,8 @@ const AccountHighlightsApiAxiosParamCreator = function (configuration) {
             // verify required parameter 'highlightId' is not null or undefined
             (0, common_1.assertParamExists)('deleteAccountHighlight', 'highlightId', highlightId);
             const localVarPath = `/accounts/{account_id}/highlights/{highlight_id}`
-                .replace(`{${"account_id"}}`, encodeURIComponent(String(accountId)))
-                .replace(`{${"highlight_id"}}`, encodeURIComponent(String(highlightId)));
+                .replace('{account_id}', encodeURIComponent(String(accountId)))
+                .replace('{highlight_id}', encodeURIComponent(String(highlightId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
             let baseOptions;
@@ -220,8 +220,8 @@ const AccountHighlightsApiAxiosParamCreator = function (configuration) {
             // verify required parameter 'accountId' is not null or undefined
             (0, common_1.assertParamExists)('updateAccountHighlight', 'accountId', accountId);
             const localVarPath = `/accounts/{account_id}/highlights/{highlight_id}`
-                .replace(`{${"highlight_id"}}`, encodeURIComponent(String(highlightId)))
-                .replace(`{${"account_id"}}`, encodeURIComponent(String(accountId)));
+                .replace('{highlight_id}', encodeURIComponent(String(highlightId)))
+                .replace('{account_id}', encodeURIComponent(String(accountId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
             let baseOptions;
@@ -263,10 +263,11 @@ const AccountHighlightsApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async createAccountHighlight(accountId, body, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.createAccountHighlight(accountId, body, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['AccountHighlightsApi.createAccountHighlight']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['AccountHighlightsApi.createAccountHighlight']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -278,10 +279,11 @@ const AccountHighlightsApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async deleteAccountHighlight(accountId, highlightId, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.deleteAccountHighlight(accountId, highlightId, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['AccountHighlightsApi.deleteAccountHighlight']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['AccountHighlightsApi.deleteAccountHighlight']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -294,10 +296,11 @@ const AccountHighlightsApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async updateAccountHighlight(highlightId, accountId, body, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.updateAccountHighlight(highlightId, accountId, body, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['AccountHighlightsApi.updateAccountHighlight']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['AccountHighlightsApi.updateAccountHighlight']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
     };
@@ -427,7 +430,7 @@ const AccountsApiAxiosParamCreator = function (configuration) {
             // verify required parameter 'id' is not null or undefined
             (0, common_1.assertParamExists)('createActivity', 'id', id);
             const localVarPath = `/accounts/{id}/activities`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
             let baseOptions;
@@ -462,7 +465,7 @@ const AccountsApiAxiosParamCreator = function (configuration) {
             // verify required parameter 'id' is not null or undefined
             (0, common_1.assertParamExists)('deleteAccount', 'id', id);
             const localVarPath = `/accounts/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
             let baseOptions;
@@ -495,7 +498,7 @@ const AccountsApiAxiosParamCreator = function (configuration) {
             // verify required parameter 'id' is not null or undefined
             (0, common_1.assertParamExists)('getAccount', 'id', id);
             const localVarPath = `/accounts/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
             let baseOptions;
@@ -600,7 +603,7 @@ const AccountsApiAxiosParamCreator = function (configuration) {
             // verify required parameter 'id' is not null or undefined
             (0, common_1.assertParamExists)('updateAccount', 'id', id);
             const localVarPath = `/accounts/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
             let baseOptions;
@@ -669,7 +672,7 @@ const AccountsApiAxiosParamCreator = function (configuration) {
             // verify required parameter 'id' is not null or undefined
             (0, common_1.assertParamExists)('uploadAccountFile', 'id', id);
             const localVarPath = `/accounts/{id}/files`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
             let baseOptions;
@@ -717,10 +720,11 @@ const AccountsApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async createAccount(body, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.createAccount(body, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['AccountsApi.createAccount']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['AccountsApi.createAccount']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -732,10 +736,11 @@ const AccountsApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async createActivity(id, body, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.createActivity(id, body, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['AccountsApi.createActivity']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['AccountsApi.createActivity']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -746,10 +751,11 @@ const AccountsApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async deleteAccount(id, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.deleteAccount(id, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['AccountsApi.deleteAccount']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['AccountsApi.deleteAccount']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -760,10 +766,11 @@ const AccountsApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async getAccount(id, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.getAccount(id, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['AccountsApi.getAccount']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['AccountsApi.getAccount']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -775,10 +782,11 @@ const AccountsApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async getAccounts(limit, cursor, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.getAccounts(limit, cursor, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['AccountsApi.getAccounts']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['AccountsApi.getAccounts']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -789,10 +797,11 @@ const AccountsApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async searchAccounts(body, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.searchAccounts(body, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['AccountsApi.searchAccounts']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['AccountsApi.searchAccounts']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -804,10 +813,11 @@ const AccountsApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async updateAccount(id, body, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.updateAccount(id, body, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['AccountsApi.updateAccount']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['AccountsApi.updateAccount']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -818,10 +828,11 @@ const AccountsApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async updateAccounts(body, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.updateAccounts(body, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['AccountsApi.updateAccounts']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['AccountsApi.updateAccounts']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -834,10 +845,11 @@ const AccountsApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async uploadAccountFile(id, file, fileUrl, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.uploadAccountFile(id, file, fileUrl, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['AccountsApi.uploadAccountFile']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['AccountsApi.uploadAccountFile']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
     };
@@ -1088,10 +1100,11 @@ const ActivityTypesApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async getActivityTypes(options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.getActivityTypes(options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['ActivityTypesApi.getActivityTypes']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['ActivityTypesApi.getActivityTypes']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
     };
@@ -1147,7 +1160,7 @@ const ArticlesApiAxiosParamCreator = function (configuration) {
             // verify required parameter 'id' is not null or undefined
             (0, common_1.assertParamExists)('createArticle', 'id', id);
             const localVarPath = `/knowledge-bases/{id}/articles`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
             let baseOptions;
@@ -1185,8 +1198,8 @@ const ArticlesApiAxiosParamCreator = function (configuration) {
             // verify required parameter 'articleId' is not null or undefined
             (0, common_1.assertParamExists)('deleteArticle', 'articleId', articleId);
             const localVarPath = `/knowledge-bases/{id}/articles/{article_id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)))
-                .replace(`{${"article_id"}}`, encodeURIComponent(String(articleId)));
+                .replace('{id}', encodeURIComponent(String(id)))
+                .replace('{article_id}', encodeURIComponent(String(articleId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
             let baseOptions;
@@ -1223,8 +1236,8 @@ const ArticlesApiAxiosParamCreator = function (configuration) {
             // verify required parameter 'articleId' is not null or undefined
             (0, common_1.assertParamExists)('getArticle', 'articleId', articleId);
             const localVarPath = `/knowledge-bases/{id}/articles/{article_id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)))
-                .replace(`{${"article_id"}}`, encodeURIComponent(String(articleId)));
+                .replace('{id}', encodeURIComponent(String(id)))
+                .replace('{article_id}', encodeURIComponent(String(articleId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
             let baseOptions;
@@ -1263,7 +1276,7 @@ const ArticlesApiAxiosParamCreator = function (configuration) {
             // verify required parameter 'id' is not null or undefined
             (0, common_1.assertParamExists)('getArticles', 'id', id);
             const localVarPath = `/knowledge-bases/{id}/articles`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
             let baseOptions;
@@ -1309,8 +1322,8 @@ const ArticlesApiAxiosParamCreator = function (configuration) {
             // verify required parameter 'articleId' is not null or undefined
             (0, common_1.assertParamExists)('updateArticle', 'articleId', articleId);
             const localVarPath = `/knowledge-bases/{id}/articles/{article_id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)))
-                .replace(`{${"article_id"}}`, encodeURIComponent(String(articleId)));
+                .replace('{id}', encodeURIComponent(String(id)))
+                .replace('{article_id}', encodeURIComponent(String(articleId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
             let baseOptions;
@@ -1352,10 +1365,11 @@ const ArticlesApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async createArticle(id, body, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.createArticle(id, body, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['ArticlesApi.createArticle']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['ArticlesApi.createArticle']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -1367,10 +1381,11 @@ const ArticlesApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async deleteArticle(id, articleId, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.deleteArticle(id, articleId, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['ArticlesApi.deleteArticle']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['ArticlesApi.deleteArticle']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -1383,10 +1398,11 @@ const ArticlesApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async getArticle(id, articleId, language, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.getArticle(id, articleId, language, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['ArticlesApi.getArticle']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['ArticlesApi.getArticle']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -1400,10 +1416,11 @@ const ArticlesApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async getArticles(id, cursor, limit, language, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.getArticles(id, cursor, limit, language, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['ArticlesApi.getArticles']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['ArticlesApi.getArticles']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -1416,10 +1433,11 @@ const ArticlesApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async updateArticle(id, articleId, body, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.updateArticle(id, articleId, body, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['ArticlesApi.updateArticle']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['ArticlesApi.updateArticle']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
     };
@@ -1608,10 +1626,11 @@ const AttachmentsApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async createAttachment(description, file, fileUrl, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.createAttachment(description, file, fileUrl, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['AttachmentsApi.createAttachment']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['AttachmentsApi.createAttachment']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
     };
@@ -1712,10 +1731,11 @@ const AuditLogsApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async getAuditLogs(cursor, limit, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.getAuditLogs(cursor, limit, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['AuditLogsApi.getAuditLogs']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['AuditLogsApi.getAuditLogs']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
     };
@@ -1773,7 +1793,7 @@ const CollectionsApiAxiosParamCreator = function (configuration) {
             // verify required parameter 'id' is not null or undefined
             (0, common_1.assertParamExists)('createCollection', 'id', id);
             const localVarPath = `/knowledge-bases/{id}/collections`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
             let baseOptions;
@@ -1811,8 +1831,8 @@ const CollectionsApiAxiosParamCreator = function (configuration) {
             // verify required parameter 'collectionId' is not null or undefined
             (0, common_1.assertParamExists)('deleteCollection', 'collectionId', collectionId);
             const localVarPath = `/knowledge-bases/{id}/collections/{collection_id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)))
-                .replace(`{${"collection_id"}}`, encodeURIComponent(String(collectionId)));
+                .replace('{id}', encodeURIComponent(String(id)))
+                .replace('{collection_id}', encodeURIComponent(String(collectionId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
             let baseOptions;
@@ -1848,8 +1868,8 @@ const CollectionsApiAxiosParamCreator = function (configuration) {
             // verify required parameter 'collectionId' is not null or undefined
             (0, common_1.assertParamExists)('getCollection', 'collectionId', collectionId);
             const localVarPath = `/knowledge-bases/{id}/collections/{collection_id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)))
-                .replace(`{${"collection_id"}}`, encodeURIComponent(String(collectionId)));
+                .replace('{id}', encodeURIComponent(String(id)))
+                .replace('{collection_id}', encodeURIComponent(String(collectionId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
             let baseOptions;
@@ -1882,7 +1902,7 @@ const CollectionsApiAxiosParamCreator = function (configuration) {
             // verify required parameter 'id' is not null or undefined
             (0, common_1.assertParamExists)('getCollections', 'id', id);
             const localVarPath = `/knowledge-bases/{id}/collections`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
             let baseOptions;
@@ -1922,10 +1942,11 @@ const CollectionsApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async createCollection(id, body, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.createCollection(id, body, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['CollectionsApi.createCollection']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['CollectionsApi.createCollection']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -1937,10 +1958,11 @@ const CollectionsApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async deleteCollection(id, collectionId, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.deleteCollection(id, collectionId, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['CollectionsApi.deleteCollection']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['CollectionsApi.deleteCollection']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -1952,10 +1974,11 @@ const CollectionsApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async getCollection(id, collectionId, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.getCollection(id, collectionId, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['CollectionsApi.getCollection']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['CollectionsApi.getCollection']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -1966,10 +1989,11 @@ const CollectionsApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async getCollections(id, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.getCollections(id, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['CollectionsApi.getCollections']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['CollectionsApi.getCollections']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
     };
@@ -2118,7 +2142,7 @@ const ContactsApiAxiosParamCreator = function (configuration) {
             // verify required parameter 'id' is not null or undefined
             (0, common_1.assertParamExists)('deleteContact', 'id', id);
             const localVarPath = `/contacts/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
             let baseOptions;
@@ -2155,7 +2179,7 @@ const ContactsApiAxiosParamCreator = function (configuration) {
             // verify required parameter 'limit' is not null or undefined
             (0, common_1.assertParamExists)('getContact', 'limit', limit);
             const localVarPath = `/contacts/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
             let baseOptions;
@@ -2256,7 +2280,7 @@ const ContactsApiAxiosParamCreator = function (configuration) {
             // verify required parameter 'id' is not null or undefined
             (0, common_1.assertParamExists)('updateContact', 'id', id);
             const localVarPath = `/contacts/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
             let baseOptions;
@@ -2297,10 +2321,11 @@ const ContactsApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async createContact(body, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.createContact(body, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['ContactsApi.createContact']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['ContactsApi.createContact']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -2311,10 +2336,11 @@ const ContactsApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async deleteContact(id, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.deleteContact(id, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['ContactsApi.deleteContact']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['ContactsApi.deleteContact']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -2327,10 +2353,11 @@ const ContactsApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async getContact(id, limit, cursor, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.getContact(id, limit, cursor, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['ContactsApi.getContact']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['ContactsApi.getContact']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -2340,10 +2367,11 @@ const ContactsApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async getContacts(options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.getContacts(options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['ContactsApi.getContacts']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['ContactsApi.getContacts']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -2354,10 +2382,11 @@ const ContactsApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async searchContacts(body, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.searchContacts(body, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['ContactsApi.searchContacts']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['ContactsApi.searchContacts']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -2369,10 +2398,11 @@ const ContactsApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async updateContact(id, body, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.updateContact(id, body, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['ContactsApi.updateContact']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['ContactsApi.updateContact']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
     };
@@ -2559,7 +2589,7 @@ const CustomFieldsApiAxiosParamCreator = function (configuration) {
             // verify required parameter 'id' is not null or undefined
             (0, common_1.assertParamExists)('getCustomField', 'id', id);
             const localVarPath = `/custom-fields/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
             let baseOptions;
@@ -2628,7 +2658,7 @@ const CustomFieldsApiAxiosParamCreator = function (configuration) {
             // verify required parameter 'id' is not null or undefined
             (0, common_1.assertParamExists)('updateCustomField', 'id', id);
             const localVarPath = `/custom-fields/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
             let baseOptions;
@@ -2669,10 +2699,11 @@ const CustomFieldsApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async createCustomField(body, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.createCustomField(body, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['CustomFieldsApi.createCustomField']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['CustomFieldsApi.createCustomField']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -2683,10 +2714,11 @@ const CustomFieldsApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async getCustomField(id, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.getCustomField(id, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['CustomFieldsApi.getCustomField']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['CustomFieldsApi.getCustomField']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -2697,10 +2729,11 @@ const CustomFieldsApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async getCustomFields(objectType, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.getCustomFields(objectType, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['CustomFieldsApi.getCustomFields']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['CustomFieldsApi.getCustomFields']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -2712,10 +2745,11 @@ const CustomFieldsApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async updateCustomField(id, body, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.updateCustomField(id, body, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['CustomFieldsApi.updateCustomField']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['CustomFieldsApi.updateCustomField']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
     };
@@ -2833,7 +2867,7 @@ const CustomObjectsApiAxiosParamCreator = function (configuration) {
             // verify required parameter 'type' is not null or undefined
             (0, common_1.assertParamExists)('createCustomObject', 'type', type);
             const localVarPath = `/custom-objects/{type}`
-                .replace(`{${"type"}}`, encodeURIComponent(String(type)));
+                .replace('{type}', encodeURIComponent(String(type)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
             let baseOptions;
@@ -2871,8 +2905,8 @@ const CustomObjectsApiAxiosParamCreator = function (configuration) {
             // verify required parameter 'id' is not null or undefined
             (0, common_1.assertParamExists)('deleteCustomObject', 'id', id);
             const localVarPath = `/custom-objects/{type}/{id}`
-                .replace(`{${"type"}}`, encodeURIComponent(String(type)))
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{type}', encodeURIComponent(String(type)))
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
             let baseOptions;
@@ -2908,8 +2942,8 @@ const CustomObjectsApiAxiosParamCreator = function (configuration) {
             // verify required parameter 'id' is not null or undefined
             (0, common_1.assertParamExists)('getCustomObject', 'id', id);
             const localVarPath = `/custom-objects/{type}/{id}`
-                .replace(`{${"type"}}`, encodeURIComponent(String(type)))
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{type}', encodeURIComponent(String(type)))
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
             let baseOptions;
@@ -2944,7 +2978,7 @@ const CustomObjectsApiAxiosParamCreator = function (configuration) {
             // verify required parameter 'type' is not null or undefined
             (0, common_1.assertParamExists)('getCustomObjects', 'type', type);
             const localVarPath = `/custom-objects/{type}`
-                .replace(`{${"type"}}`, encodeURIComponent(String(type)));
+                .replace('{type}', encodeURIComponent(String(type)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
             let baseOptions;
@@ -2984,7 +3018,7 @@ const CustomObjectsApiAxiosParamCreator = function (configuration) {
             // verify required parameter 'type' is not null or undefined
             (0, common_1.assertParamExists)('searchCustomObjects', 'type', type);
             const localVarPath = `/custom-objects/{type}/search`
-                .replace(`{${"type"}}`, encodeURIComponent(String(type)));
+                .replace('{type}', encodeURIComponent(String(type)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
             let baseOptions;
@@ -3023,8 +3057,8 @@ const CustomObjectsApiAxiosParamCreator = function (configuration) {
             // verify required parameter 'id' is not null or undefined
             (0, common_1.assertParamExists)('updateCustomObject', 'id', id);
             const localVarPath = `/custom-objects/{type}/{id}`
-                .replace(`{${"type"}}`, encodeURIComponent(String(type)))
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{type}', encodeURIComponent(String(type)))
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
             let baseOptions;
@@ -3066,10 +3100,11 @@ const CustomObjectsApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async createCustomObject(type, body, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.createCustomObject(type, body, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['CustomObjectsApi.createCustomObject']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['CustomObjectsApi.createCustomObject']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -3081,10 +3116,11 @@ const CustomObjectsApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async deleteCustomObject(type, id, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.deleteCustomObject(type, id, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['CustomObjectsApi.deleteCustomObject']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['CustomObjectsApi.deleteCustomObject']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -3096,10 +3132,11 @@ const CustomObjectsApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async getCustomObject(type, id, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.getCustomObject(type, id, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['CustomObjectsApi.getCustomObject']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['CustomObjectsApi.getCustomObject']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -3112,10 +3149,11 @@ const CustomObjectsApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async getCustomObjects(type, cursor, limit, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.getCustomObjects(type, cursor, limit, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['CustomObjectsApi.getCustomObjects']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['CustomObjectsApi.getCustomObjects']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -3127,10 +3165,11 @@ const CustomObjectsApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async searchCustomObjects(type, body, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.searchCustomObjects(type, body, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['CustomObjectsApi.searchCustomObjects']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['CustomObjectsApi.searchCustomObjects']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -3143,10 +3182,11 @@ const CustomObjectsApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async updateCustomObject(type, id, body, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.updateCustomObject(type, id, body, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['CustomObjectsApi.updateCustomObject']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['CustomObjectsApi.updateCustomObject']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
     };
@@ -3303,7 +3343,7 @@ const FeatureRequestsApiAxiosParamCreator = function (configuration) {
             // verify required parameter 'id' is not null or undefined
             (0, common_1.assertParamExists)('deleteFeatureRequest', 'id', id);
             const localVarPath = `/feature-requests/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
             let baseOptions;
@@ -3337,7 +3377,7 @@ const FeatureRequestsApiAxiosParamCreator = function (configuration) {
             // verify required parameter 'id' is not null or undefined
             (0, common_1.assertParamExists)('getFeatureRequest', 'id', id);
             const localVarPath = `/feature-requests/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
             let baseOptions;
@@ -3406,7 +3446,7 @@ const FeatureRequestsApiAxiosParamCreator = function (configuration) {
             // verify required parameter 'id' is not null or undefined
             (0, common_1.assertParamExists)('updateFeatureRequest', 'id', id);
             const localVarPath = `/feature-requests/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
             let baseOptions;
@@ -3447,10 +3487,11 @@ const FeatureRequestsApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async deleteFeatureRequest(id, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.deleteFeatureRequest(id, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['FeatureRequestsApi.deleteFeatureRequest']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['FeatureRequestsApi.deleteFeatureRequest']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -3462,10 +3503,11 @@ const FeatureRequestsApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async getFeatureRequest(id, fetchEvidence, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.getFeatureRequest(id, fetchEvidence, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['FeatureRequestsApi.getFeatureRequest']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['FeatureRequestsApi.getFeatureRequest']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -3476,10 +3518,11 @@ const FeatureRequestsApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async searchFeatureRequests(body, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.searchFeatureRequests(body, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['FeatureRequestsApi.searchFeatureRequests']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['FeatureRequestsApi.searchFeatureRequests']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -3491,10 +3534,11 @@ const FeatureRequestsApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async updateFeatureRequest(id, body, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.updateFeatureRequest(id, body, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['FeatureRequestsApi.updateFeatureRequest']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['FeatureRequestsApi.updateFeatureRequest']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
     };
@@ -3676,7 +3720,7 @@ const ImportApiAxiosParamCreator = function (configuration) {
             // verify required parameter 'id' is not null or undefined
             (0, common_1.assertParamExists)('importMessages', 'id', id);
             const localVarPath = `/import/issues/{id}/messages`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
             let baseOptions;
@@ -3717,10 +3761,11 @@ const ImportApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async importContact(body, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.importContact(body, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['ImportApi.importContact']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['ImportApi.importContact']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -3731,10 +3776,11 @@ const ImportApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async importIssue(body, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.importIssue(body, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['ImportApi.importIssue']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['ImportApi.importIssue']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -3746,10 +3792,11 @@ const ImportApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async importMessages(id, body, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.importMessages(id, body, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['ImportApi.importMessages']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['ImportApi.importMessages']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
     };
@@ -3880,10 +3927,11 @@ const IssueStatusesApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async getIssueStatuses(options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.getIssueStatuses(options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['IssueStatusesApi.getIssueStatuses']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['IssueStatusesApi.getIssueStatuses']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
     };
@@ -3939,7 +3987,7 @@ const IssuesApiAxiosParamCreator = function (configuration) {
             // verify required parameter 'id' is not null or undefined
             (0, common_1.assertParamExists)('addIssueFollowers', 'id', id);
             const localVarPath = `/issues/{id}/followers`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
             let baseOptions;
@@ -4007,7 +4055,7 @@ const IssuesApiAxiosParamCreator = function (configuration) {
             // verify required parameter 'id' is not null or undefined
             (0, common_1.assertParamExists)('createIssueAIResponse', 'id', id);
             const localVarPath = `/issues/{id}/ai-response`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
             let baseOptions;
@@ -4042,7 +4090,7 @@ const IssuesApiAxiosParamCreator = function (configuration) {
             // verify required parameter 'id' is not null or undefined
             (0, common_1.assertParamExists)('deleteIssue', 'id', id);
             const localVarPath = `/issues/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
             let baseOptions;
@@ -4075,7 +4123,7 @@ const IssuesApiAxiosParamCreator = function (configuration) {
             // verify required parameter 'id' is not null or undefined
             (0, common_1.assertParamExists)('getIssue', 'id', id);
             const localVarPath = `/issues/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
             let baseOptions;
@@ -4108,7 +4156,7 @@ const IssuesApiAxiosParamCreator = function (configuration) {
             // verify required parameter 'id' is not null or undefined
             (0, common_1.assertParamExists)('getIssueFollowers', 'id', id);
             const localVarPath = `/issues/{id}/followers`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
             let baseOptions;
@@ -4183,7 +4231,7 @@ const IssuesApiAxiosParamCreator = function (configuration) {
             // verify required parameter 'id' is not null or undefined
             (0, common_1.assertParamExists)('linkExternalIssue', 'id', id);
             const localVarPath = `/issues/{id}/external-issues`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
             let baseOptions;
@@ -4251,7 +4299,7 @@ const IssuesApiAxiosParamCreator = function (configuration) {
             // verify required parameter 'id' is not null or undefined
             (0, common_1.assertParamExists)('snoozeIssue', 'id', id);
             const localVarPath = `/issues/{id}/snooze`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
             let baseOptions;
@@ -4287,7 +4335,7 @@ const IssuesApiAxiosParamCreator = function (configuration) {
             // verify required parameter 'id' is not null or undefined
             (0, common_1.assertParamExists)('updateIssue', 'id', id);
             const localVarPath = `/issues/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
             let baseOptions;
@@ -4329,10 +4377,11 @@ const IssuesApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async addIssueFollowers(id, body, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.addIssueFollowers(id, body, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['IssuesApi.addIssueFollowers']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['IssuesApi.addIssueFollowers']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -4343,10 +4392,11 @@ const IssuesApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async createIssue(body, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.createIssue(body, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['IssuesApi.createIssue']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['IssuesApi.createIssue']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -4358,10 +4408,11 @@ const IssuesApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async createIssueAIResponse(id, body, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.createIssueAIResponse(id, body, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['IssuesApi.createIssueAIResponse']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['IssuesApi.createIssueAIResponse']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -4372,10 +4423,11 @@ const IssuesApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async deleteIssue(id, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.deleteIssue(id, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['IssuesApi.deleteIssue']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['IssuesApi.deleteIssue']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -4386,10 +4438,11 @@ const IssuesApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async getIssue(id, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.getIssue(id, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['IssuesApi.getIssue']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['IssuesApi.getIssue']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -4400,10 +4453,11 @@ const IssuesApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async getIssueFollowers(id, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.getIssueFollowers(id, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['IssuesApi.getIssueFollowers']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['IssuesApi.getIssueFollowers']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -4415,10 +4469,11 @@ const IssuesApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async getIssues(startTime, endTime, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.getIssues(startTime, endTime, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['IssuesApi.getIssues']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['IssuesApi.getIssues']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -4430,10 +4485,11 @@ const IssuesApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async linkExternalIssue(id, body, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.linkExternalIssue(id, body, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['IssuesApi.linkExternalIssue']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['IssuesApi.linkExternalIssue']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -4444,10 +4500,11 @@ const IssuesApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async searchIssues(body, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.searchIssues(body, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['IssuesApi.searchIssues']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['IssuesApi.searchIssues']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -4459,10 +4516,11 @@ const IssuesApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async snoozeIssue(id, body, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.snoozeIssue(id, body, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['IssuesApi.snoozeIssue']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['IssuesApi.snoozeIssue']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -4474,10 +4532,11 @@ const IssuesApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async updateIssue(id, body, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.updateIssue(id, body, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['IssuesApi.updateIssue']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['IssuesApi.updateIssue']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
     };
@@ -4734,7 +4793,7 @@ const KnowledgeBasesApiAxiosParamCreator = function (configuration) {
             // verify required parameter 'id' is not null or undefined
             (0, common_1.assertParamExists)('getKnowledgeBase', 'id', id);
             const localVarPath = `/knowledge-bases/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
             let baseOptions;
@@ -4802,10 +4861,11 @@ const KnowledgeBasesApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async getKnowledgeBase(id, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.getKnowledgeBase(id, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['KnowledgeBasesApi.getKnowledgeBase']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['KnowledgeBasesApi.getKnowledgeBase']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -4815,10 +4875,11 @@ const KnowledgeBasesApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async getKnowledgeBases(options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.getKnowledgeBases(options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['KnowledgeBasesApi.getKnowledgeBases']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['KnowledgeBasesApi.getKnowledgeBases']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
     };
@@ -4925,7 +4986,7 @@ const MacrosApiAxiosParamCreator = function (configuration) {
             // verify required parameter 'id' is not null or undefined
             (0, common_1.assertParamExists)('getMacro', 'id', id);
             const localVarPath = `/macros/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
             let baseOptions;
@@ -5021,7 +5082,7 @@ const MacrosApiAxiosParamCreator = function (configuration) {
             // verify required parameter 'id' is not null or undefined
             (0, common_1.assertParamExists)('updateMacro', 'id', id);
             const localVarPath = `/macros/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
             let baseOptions;
@@ -5062,10 +5123,11 @@ const MacrosApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async createMacro(body, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.createMacro(body, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['MacrosApi.createMacro']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['MacrosApi.createMacro']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -5076,10 +5138,11 @@ const MacrosApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async getMacro(id, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.getMacro(id, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['MacrosApi.getMacro']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['MacrosApi.getMacro']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -5089,10 +5152,11 @@ const MacrosApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async getMacroGroups(options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.getMacroGroups(options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['MacrosApi.getMacroGroups']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['MacrosApi.getMacroGroups']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -5103,10 +5167,11 @@ const MacrosApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async getMacros(macroGroupId, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.getMacros(macroGroupId, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['MacrosApi.getMacros']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['MacrosApi.getMacros']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -5118,10 +5183,11 @@ const MacrosApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async updateMacro(id, body, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.updateMacro(id, body, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['MacrosApi.updateMacro']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['MacrosApi.updateMacro']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
     };
@@ -5290,10 +5356,11 @@ const MeApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async getMe(options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.getMe(options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['MeApi.getMe']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['MeApi.getMe']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
     };
@@ -5349,7 +5416,7 @@ const MessagesApiAxiosParamCreator = function (configuration) {
             // verify required parameter 'id' is not null or undefined
             (0, common_1.assertParamExists)('createIssueNote', 'id', id);
             const localVarPath = `/issues/{id}/note`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
             let baseOptions;
@@ -5385,7 +5452,7 @@ const MessagesApiAxiosParamCreator = function (configuration) {
             // verify required parameter 'id' is not null or undefined
             (0, common_1.assertParamExists)('createIssueReply', 'id', id);
             const localVarPath = `/issues/{id}/reply`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
             let baseOptions;
@@ -5421,7 +5488,7 @@ const MessagesApiAxiosParamCreator = function (configuration) {
             // verify required parameter 'id' is not null or undefined
             (0, common_1.assertParamExists)('createIssueThread', 'id', id);
             const localVarPath = `/issues/{id}/threads`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
             let baseOptions;
@@ -5459,8 +5526,8 @@ const MessagesApiAxiosParamCreator = function (configuration) {
             // verify required parameter 'messageId' is not null or undefined
             (0, common_1.assertParamExists)('deleteMessage', 'messageId', messageId);
             const localVarPath = `/issues/{id}/messages/{message_id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)))
-                .replace(`{${"message_id"}}`, encodeURIComponent(String(messageId)));
+                .replace('{id}', encodeURIComponent(String(id)))
+                .replace('{message_id}', encodeURIComponent(String(messageId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
             let baseOptions;
@@ -5493,7 +5560,7 @@ const MessagesApiAxiosParamCreator = function (configuration) {
             // verify required parameter 'id' is not null or undefined
             (0, common_1.assertParamExists)('getIssueMessages', 'id', id);
             const localVarPath = `/issues/{id}/messages`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
             let baseOptions;
@@ -5526,7 +5593,7 @@ const MessagesApiAxiosParamCreator = function (configuration) {
             // verify required parameter 'id' is not null or undefined
             (0, common_1.assertParamExists)('getIssueThreads', 'id', id);
             const localVarPath = `/issues/{id}/threads`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
             let baseOptions;
@@ -5562,8 +5629,8 @@ const MessagesApiAxiosParamCreator = function (configuration) {
             // verify required parameter 'messageId' is not null or undefined
             (0, common_1.assertParamExists)('redactMessage', 'messageId', messageId);
             const localVarPath = `/issues/{id}/messages/{message_id}/redact`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)))
-                .replace(`{${"message_id"}}`, encodeURIComponent(String(messageId)));
+                .replace('{id}', encodeURIComponent(String(id)))
+                .replace('{message_id}', encodeURIComponent(String(messageId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
             let baseOptions;
@@ -5603,10 +5670,11 @@ const MessagesApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async createIssueNote(id, body, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.createIssueNote(id, body, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['MessagesApi.createIssueNote']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['MessagesApi.createIssueNote']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -5618,10 +5686,11 @@ const MessagesApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async createIssueReply(id, body, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.createIssueReply(id, body, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['MessagesApi.createIssueReply']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['MessagesApi.createIssueReply']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -5633,10 +5702,11 @@ const MessagesApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async createIssueThread(id, body, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.createIssueThread(id, body, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['MessagesApi.createIssueThread']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['MessagesApi.createIssueThread']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -5648,10 +5718,11 @@ const MessagesApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async deleteMessage(id, messageId, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.deleteMessage(id, messageId, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['MessagesApi.deleteMessage']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['MessagesApi.deleteMessage']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -5662,10 +5733,11 @@ const MessagesApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async getIssueMessages(id, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.getIssueMessages(id, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['MessagesApi.getIssueMessages']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['MessagesApi.getIssueMessages']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -5676,10 +5748,11 @@ const MessagesApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async getIssueThreads(id, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.getIssueThreads(id, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['MessagesApi.getIssueThreads']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['MessagesApi.getIssueThreads']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -5691,10 +5764,11 @@ const MessagesApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async redactMessage(id, messageId, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.redactMessage(id, messageId, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['MessagesApi.redactMessage']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['MessagesApi.redactMessage']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
     };
@@ -5903,7 +5977,7 @@ const MilestonesApiAxiosParamCreator = function (configuration) {
             // verify required parameter 'id' is not null or undefined
             (0, common_1.assertParamExists)('deleteMilestone', 'id', id);
             const localVarPath = `/milestones/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
             let baseOptions;
@@ -5937,7 +6011,7 @@ const MilestonesApiAxiosParamCreator = function (configuration) {
             // verify required parameter 'id' is not null or undefined
             (0, common_1.assertParamExists)('updateMilestone', 'id', id);
             const localVarPath = `/milestones/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
             let baseOptions;
@@ -5978,10 +6052,11 @@ const MilestonesApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async createMilestone(body, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.createMilestone(body, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['MilestonesApi.createMilestone']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['MilestonesApi.createMilestone']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -5992,10 +6067,11 @@ const MilestonesApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async deleteMilestone(id, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.deleteMilestone(id, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['MilestonesApi.deleteMilestone']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['MilestonesApi.deleteMilestone']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -6007,10 +6083,11 @@ const MilestonesApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async updateMilestone(id, body, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.updateMilestone(id, body, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['MilestonesApi.updateMilestone']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['MilestonesApi.updateMilestone']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
     };
@@ -6139,7 +6216,7 @@ const ProjectsApiAxiosParamCreator = function (configuration) {
             // verify required parameter 'id' is not null or undefined
             (0, common_1.assertParamExists)('deleteProject', 'id', id);
             const localVarPath = `/projects/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
             let baseOptions;
@@ -6205,7 +6282,7 @@ const ProjectsApiAxiosParamCreator = function (configuration) {
             // verify required parameter 'id' is not null or undefined
             (0, common_1.assertParamExists)('updateProject', 'id', id);
             const localVarPath = `/projects/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
             let baseOptions;
@@ -6246,10 +6323,11 @@ const ProjectsApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async createProject(body, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.createProject(body, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['ProjectsApi.createProject']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['ProjectsApi.createProject']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -6260,10 +6338,11 @@ const ProjectsApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async deleteProject(id, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.deleteProject(id, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['ProjectsApi.deleteProject']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['ProjectsApi.deleteProject']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -6274,10 +6353,11 @@ const ProjectsApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async searchProjects(body, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.searchProjects(body, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['ProjectsApi.searchProjects']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['ProjectsApi.searchProjects']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -6289,10 +6369,11 @@ const ProjectsApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async updateProject(id, body, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.updateProject(id, body, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['ProjectsApi.updateProject']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['ProjectsApi.updateProject']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
     };
@@ -6410,7 +6491,7 @@ const RouteRedirectsApiAxiosParamCreator = function (configuration) {
             // verify required parameter 'id' is not null or undefined
             (0, common_1.assertParamExists)('createRouteRedirect', 'id', id);
             const localVarPath = `/knowledge-bases/{id}/route-redirects`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
             let baseOptions;
@@ -6452,10 +6533,11 @@ const RouteRedirectsApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async createRouteRedirect(id, body, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.createRouteRedirect(id, body, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['RouteRedirectsApi.createRouteRedirect']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['RouteRedirectsApi.createRouteRedirect']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
     };
@@ -6512,7 +6594,7 @@ const SurveysApiAxiosParamCreator = function (configuration) {
             // verify required parameter 'id' is not null or undefined
             (0, common_1.assertParamExists)('getSurvey', 'id', id);
             const localVarPath = `/surveys/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
             let baseOptions;
@@ -6551,7 +6633,7 @@ const SurveysApiAxiosParamCreator = function (configuration) {
             // verify required parameter 'id' is not null or undefined
             (0, common_1.assertParamExists)('getSurveyResponses', 'id', id);
             const localVarPath = `/surveys/{id}/responses`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
             let baseOptions;
@@ -6669,10 +6751,11 @@ const SurveysApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async getSurvey(id, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.getSurvey(id, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['SurveysApi.getSurvey']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['SurveysApi.getSurvey']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -6689,10 +6772,11 @@ const SurveysApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async getSurveyResponses(id, submittedAfter, submittedBefore, accountId, contactId, cursor, limit, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.getSurveyResponses(id, submittedAfter, submittedBefore, accountId, contactId, cursor, limit, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['SurveysApi.getSurveyResponses']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['SurveysApi.getSurveyResponses']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -6702,10 +6786,11 @@ const SurveysApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async getSurveys(options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.getSurveys(options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['SurveysApi.getSurveys']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['SurveysApi.getSurveys']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -6716,10 +6801,11 @@ const SurveysApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async searchSurveys(body, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.searchSurveys(body, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['SurveysApi.searchSurveys']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['SurveysApi.searchSurveys']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
     };
@@ -6866,7 +6952,7 @@ const TagsApiAxiosParamCreator = function (configuration) {
             // verify required parameter 'id' is not null or undefined
             (0, common_1.assertParamExists)('deleteTag', 'id', id);
             const localVarPath = `/tags/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
             let baseOptions;
@@ -6899,7 +6985,7 @@ const TagsApiAxiosParamCreator = function (configuration) {
             // verify required parameter 'id' is not null or undefined
             (0, common_1.assertParamExists)('getTag', 'id', id);
             const localVarPath = `/tags/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
             let baseOptions;
@@ -6962,7 +7048,7 @@ const TagsApiAxiosParamCreator = function (configuration) {
             // verify required parameter 'id' is not null or undefined
             (0, common_1.assertParamExists)('updateTag', 'id', id);
             const localVarPath = `/tags/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
             let baseOptions;
@@ -7003,10 +7089,11 @@ const TagsApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async createTag(body, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.createTag(body, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['TagsApi.createTag']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['TagsApi.createTag']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -7017,10 +7104,11 @@ const TagsApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async deleteTag(id, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.deleteTag(id, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['TagsApi.deleteTag']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['TagsApi.deleteTag']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -7031,10 +7119,11 @@ const TagsApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async getTag(id, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.getTag(id, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['TagsApi.getTag']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['TagsApi.getTag']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -7044,10 +7133,11 @@ const TagsApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async getTags(options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.getTags(options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['TagsApi.getTags']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['TagsApi.getTags']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -7059,10 +7149,11 @@ const TagsApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async updateTag(id, body, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.updateTag(id, body, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['TagsApi.updateTag']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['TagsApi.updateTag']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
     };
@@ -7229,7 +7320,7 @@ const TasksApiAxiosParamCreator = function (configuration) {
             // verify required parameter 'id' is not null or undefined
             (0, common_1.assertParamExists)('deleteTask', 'id', id);
             const localVarPath = `/tasks/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
             let baseOptions;
@@ -7262,7 +7353,7 @@ const TasksApiAxiosParamCreator = function (configuration) {
             // verify required parameter 'id' is not null or undefined
             (0, common_1.assertParamExists)('getTask', 'id', id);
             const localVarPath = `/tasks/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
             let baseOptions;
@@ -7365,7 +7456,7 @@ const TasksApiAxiosParamCreator = function (configuration) {
             // verify required parameter 'id' is not null or undefined
             (0, common_1.assertParamExists)('updateTask', 'id', id);
             const localVarPath = `/tasks/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
             let baseOptions;
@@ -7406,10 +7497,11 @@ const TasksApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async createTask(body, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.createTask(body, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['TasksApi.createTask']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['TasksApi.createTask']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -7420,10 +7512,11 @@ const TasksApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async deleteTask(id, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.deleteTask(id, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['TasksApi.deleteTask']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['TasksApi.deleteTask']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -7434,10 +7527,11 @@ const TasksApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async getTask(id, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.getTask(id, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['TasksApi.getTask']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['TasksApi.getTask']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -7449,10 +7543,11 @@ const TasksApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async getTasks(cursor, limit, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.getTasks(cursor, limit, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['TasksApi.getTasks']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['TasksApi.getTasks']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -7463,10 +7558,11 @@ const TasksApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async searchTasks(body, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.searchTasks(body, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['TasksApi.searchTasks']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['TasksApi.searchTasks']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -7478,10 +7574,11 @@ const TasksApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async updateTask(id, body, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.updateTask(id, body, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['TasksApi.updateTask']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['TasksApi.updateTask']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
     };
@@ -7670,7 +7767,7 @@ const TeamsApiAxiosParamCreator = function (configuration) {
             // verify required parameter 'id' is not null or undefined
             (0, common_1.assertParamExists)('getTeam', 'id', id);
             const localVarPath = `/teams/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
             let baseOptions;
@@ -7733,7 +7830,7 @@ const TeamsApiAxiosParamCreator = function (configuration) {
             // verify required parameter 'id' is not null or undefined
             (0, common_1.assertParamExists)('updateTeam', 'id', id);
             const localVarPath = `/teams/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
             let baseOptions;
@@ -7774,10 +7871,11 @@ const TeamsApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async createTeam(body, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.createTeam(body, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['TeamsApi.createTeam']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['TeamsApi.createTeam']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -7788,10 +7886,11 @@ const TeamsApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async getTeam(id, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.getTeam(id, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['TeamsApi.getTeam']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['TeamsApi.getTeam']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -7801,10 +7900,11 @@ const TeamsApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async getTeams(options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.getTeams(options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['TeamsApi.getTeams']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['TeamsApi.getTeams']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -7816,10 +7916,11 @@ const TeamsApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async updateTeam(id, body, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.updateTeam(id, body, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['TeamsApi.updateTeam']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['TeamsApi.updateTeam']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
     };
@@ -7934,7 +8035,7 @@ const TicketFormsApiAxiosParamCreator = function (configuration) {
             // verify required parameter 'id' is not null or undefined
             (0, common_1.assertParamExists)('getTicketForm', 'id', id);
             const localVarPath = `/ticket-forms/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
             let baseOptions;
@@ -8002,10 +8103,11 @@ const TicketFormsApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async getTicketForm(id, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.getTicketForm(id, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['TicketFormsApi.getTicketForm']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['TicketFormsApi.getTicketForm']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -8015,10 +8117,11 @@ const TicketFormsApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async getTicketForms(options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.getTicketForms(options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['TicketFormsApi.getTicketForms']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['TicketFormsApi.getTicketForms']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
     };
@@ -8127,7 +8230,7 @@ const TrainingDataApiAxiosParamCreator = function (configuration) {
             // verify required parameter 'id' is not null or undefined
             (0, common_1.assertParamExists)('deleteTrainingDataDocuments', 'id', id);
             const localVarPath = `/training-data/{id}/documents`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
             let baseOptions;
@@ -8166,7 +8269,7 @@ const TrainingDataApiAxiosParamCreator = function (configuration) {
             // verify required parameter 'id' is not null or undefined
             (0, common_1.assertParamExists)('getTrainingData', 'id', id);
             const localVarPath = `/training-data/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
             let baseOptions;
@@ -8324,10 +8427,11 @@ const TrainingDataApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async createTrainingData(body, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.createTrainingData(body, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['TrainingDataApi.createTrainingData']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['TrainingDataApi.createTrainingData']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -8340,10 +8444,11 @@ const TrainingDataApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async deleteTrainingDataDocuments(id, documentIds, externalIds, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.deleteTrainingDataDocuments(id, documentIds, externalIds, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['TrainingDataApi.deleteTrainingDataDocuments']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['TrainingDataApi.deleteTrainingDataDocuments']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -8354,10 +8459,11 @@ const TrainingDataApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async getTrainingData(id, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.getTrainingData(id, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['TrainingDataApi.getTrainingData']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['TrainingDataApi.getTrainingData']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -8367,10 +8473,11 @@ const TrainingDataApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async listTrainingData(options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.listTrainingData(options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['TrainingDataApi.listTrainingData']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['TrainingDataApi.listTrainingData']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -8381,10 +8488,11 @@ const TrainingDataApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async uploadTrainingDataFileContent(body, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.uploadTrainingDataFileContent(body, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['TrainingDataApi.uploadTrainingDataFileContent']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['TrainingDataApi.uploadTrainingDataFileContent']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -8400,10 +8508,11 @@ const TrainingDataApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async uploadTrainingDataFiles(files, externalIds, fileNames, trainingDataId, trainingDataName, visibility, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.uploadTrainingDataFiles(files, externalIds, fileNames, trainingDataId, trainingDataName, visibility, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['TrainingDataApi.uploadTrainingDataFiles']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['TrainingDataApi.uploadTrainingDataFiles']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
     };
@@ -8558,7 +8667,7 @@ const UserApiAxiosParamCreator = function (configuration) {
             // verify required parameter 'id' is not null or undefined
             (0, common_1.assertParamExists)('getUser', 'id', id);
             const localVarPath = `/users/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
             let baseOptions;
@@ -8592,7 +8701,7 @@ const UserApiAxiosParamCreator = function (configuration) {
             // verify required parameter 'id' is not null or undefined
             (0, common_1.assertParamExists)('updateUser', 'id', id);
             const localVarPath = `/users/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
             let baseOptions;
@@ -8633,10 +8742,11 @@ const UserApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async getUser(id, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.getUser(id, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['UserApi.getUser']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['UserApi.getUser']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -8648,10 +8758,11 @@ const UserApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async updateUser(id, body, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.updateUser(id, body, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['UserApi.updateUser']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['UserApi.updateUser']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
     };
@@ -8762,10 +8873,11 @@ const UserRolesApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async getUserRoles(options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.getUserRoles(options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['UserRolesApi.getUserRoles']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['UserRolesApi.getUserRoles']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
     };
@@ -8886,10 +8998,11 @@ const UsersApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async getUsers(options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.getUsers(options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['UsersApi.getUsers']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['UsersApi.getUsers']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -8900,10 +9013,11 @@ const UsersApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         async searchUsers(body, options) {
-            var _a, _b, _c;
+            var _a, _b;
+            var _c;
             const localVarAxiosArgs = await localVarAxiosParamCreator.searchUsers(body, options);
-            const localVarOperationServerIndex = (_a = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _a !== void 0 ? _a : 0;
-            const localVarOperationServerBasePath = (_c = (_b = base_1.operationServerMap['UsersApi.searchUsers']) === null || _b === void 0 ? void 0 : _b[localVarOperationServerIndex]) === null || _c === void 0 ? void 0 : _c.url;
+            const localVarOperationServerIndex = (_c = configuration === null || configuration === void 0 ? void 0 : configuration.serverIndex) !== null && _c !== void 0 ? _c : 0;
+            const localVarOperationServerBasePath = (_b = (_a = base_1.operationServerMap['UsersApi.searchUsers']) === null || _a === void 0 ? void 0 : _a[localVarOperationServerIndex]) === null || _b === void 0 ? void 0 : _b.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
     };
