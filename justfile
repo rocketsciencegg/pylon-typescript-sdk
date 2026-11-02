@@ -30,14 +30,14 @@ build:
     fi
     echo "Generating {{ sdk_name }} from OpenAPI spec..."
     export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
-    npx @openapitools/openapi-generator-cli generate \
+    pnpm dlx @openapitools/openapi-generator-cli generate \
         -i {{ spec_file }} \
         -g typescript-axios \
         -o . \
         --additional-properties=npmName={{ sdk_name }},modelPropertyNaming=camelCase,useSingleRequestParameter=true
     echo "Compiling TypeScript..."
-    npx tsc
+    pnpm exec tsc
 
 # Compile TypeScript only (no regeneration)
 compile:
-    npx tsc
+    pnpm exec tsc
