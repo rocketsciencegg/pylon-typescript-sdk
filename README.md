@@ -7,13 +7,13 @@ TypeScript SDK for the [Pylon API](https://docs.usepylon.com), auto-generated fr
 ## Installation
 
 ```bash
-npm install github:rocketsciencegg/pylon-typescript-sdk
+pnpm add github:rocketsciencegg/pylon-typescript-sdk
 ```
 
 Pin a specific version:
 
 ```bash
-npm install github:rocketsciencegg/pylon-typescript-sdk#v0.1.0
+pnpm add github:rocketsciencegg/pylon-typescript-sdk#v0.1.0
 ```
 
 ## Requirements
@@ -21,6 +21,8 @@ npm install github:rocketsciencegg/pylon-typescript-sdk#v0.1.0
 Node.js **>= 22.13.0** (enforced via `engines` in `package.json`). That is the
 compatibility floor for consumers, not the toolchain: this repo builds and releases
 on the exact version in `.node-version`.
+
+Development and release use **pnpm 12.15.0**, pinned by `packageManager` in `package.json`.
 
 ## Quick Start
 
