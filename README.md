@@ -22,7 +22,7 @@ Node.js **>= 22.13.0** (enforced via `engines` in `package.json`). That is the
 compatibility floor for consumers, not the toolchain: this repo builds and releases
 on the exact version in `.node-version`.
 
-Development and release use **pnpm 12.15.0**, pinned by `packageManager` in `package.json`.
+Development and release use **pnpm 12.18.0**, pinned by `packageManager` in `package.json`.
 
 ## Quick Start
 
