@@ -1,7 +1,7 @@
 {
   "name": "pylon-typescript-sdk",
   "version": "0.2.0",
-  "packageManager": "pnpm@12.17.0",
+  "packageManager": "pnpm@12.18.0",
   "description": "TypeScript SDK for the Pylon API, auto-generated from OpenAPI spec",
   "author": "Rocket Science",
   "repository": {
