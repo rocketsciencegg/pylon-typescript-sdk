@@ -8,18 +8,25 @@ on:
         type: string
 
 permissions:
-  contents: write
+  contents: read
+
+# This job tags and publishes a GitHub release. A restored pnpm store is code
+# execution here, so it neither restores nor saves a cache.
+cache-mode: none
 
 jobs:
   release:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - uses: pnpm/action-setup@73e46992e05b19abd31f2f3c20e0e7370d762115 # v6.1.1
+        with:
+          cache: false
       - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
           node-version-file: .node-version
-          cache: 'pnpm'
       - run: pnpm install --frozen-lockfile
       - run: pnpm exec tsc
       - name: Get version
