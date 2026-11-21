@@ -49,7 +49,7 @@ See the [generated docs](docs/) for all available methods and models.
 Generated from `pylon.json` using [OpenAPI Generator](https://openapi-generator.tech/) v7.19.0 (`typescript-axios`).
 
 ```bash
-just install     # System deps (Java)
+just install-jdk # System deps (Java)
 just fetch-spec  # Refresh pylon.json from https://static.usepylon.com/openapi.json
 just build       # Regenerate + compile
 just compile     # TypeScript only

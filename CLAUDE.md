@@ -14,7 +14,7 @@ pnpm run build         # Compile TypeScript to dist/
 just fetch-spec        # Refresh pylon.json from https://static.usepylon.com/openapi.json (vendored, do not edit)
 just build             # Full regeneration: generate SDK from pylon.json + compile
 just compile           # Compile TypeScript only (no regeneration)
-just install           # Install system dependencies (openjdk via Homebrew)
+just install-jdk       # Install system dependencies (openjdk via Homebrew)
 just clean             # Remove dist/ directory
 ```
 
